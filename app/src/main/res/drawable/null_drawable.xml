@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Drawable Resource File: null_drawable
+Description:            Dummy Drawable.
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#00000000"/>
+
+    <stroke android:color="#00000000" android:width="0dp"/>
+
+</shape>

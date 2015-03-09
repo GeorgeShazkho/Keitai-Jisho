@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   element_results
+Description:            Result list element as for ListView inflation
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    >
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView"
+        android:layout_toRightOf="@+id/element_result_verticalBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
+        android:background="#258b1c1c"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/element_result_table"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/element_result_kana">
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/element_result_romaji"
+                android:layout_marginTop="-4dp">
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:id="@+id/element_result_kanji_header"
+        android:layout_toRightOf="@+id/element_result_verticalBar"
+        android:layout_below="@+id/horizontalScrollView"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/results_element_kanjiHeader_text"
+            android:id="@+id/element_result_kanjiHeader"
+            android:textSize="14sp"
+            android:textColor="@color/AppTheme.text_secondary_icons"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:layout_toRightOf="@+id/element_result_verticalBar2"
+        android:layout_below="@+id/element_result_kanji_header"
+        android:id="@+id/element_result_kanji_layout"
+        android:background="@color/results_kakaBackground"
+        android:paddingLeft="14dp">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/element_result_kanji_label"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/results_element_kanjiHeader_text"
+                android:id="@+id/textView2"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:background="@drawable/kanji_label_background"
+                android:textColor="@color/AppTheme.text_base"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/element_result_kanji"
+            android:background="@color/results_kakaBackground"
+            android:paddingLeft="14dp"
+            android:layout_toRightOf="@+id/element_result_kanji_label"
+            android:layout_centerVertical="true">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/element_result_horizontalBar"
+        android:layout_below="@+id/element_result_kanji_layout"
+        android:layout_toRightOf="@+id/element_result_verticalBar2"
+        android:background="@color/AppTheme.dividers"
+        android:layout_alignParentRight="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/element_result_meanings"
+        android:layout_toRightOf="@+id/element_result_verticalBar2"
+        android:paddingLeft="14dp"
+        android:background="@color/results_kakaBackground"
+        android:paddingRight="16dp"
+        android:layout_below="@+id/element_result_horizontalBar"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/results_element_glossHeader_text"
+            android:id="@+id/element_result_glossHeader"
+            android:gravity="center_vertical"
+            android:textColor="@color/AppTheme.text_base"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/element_result_gloss"
+            android:layout_below="@+id/element_result_glossHeader"
+            >
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="8dp"
+        android:layout_height="match_parent"
+        android:id="@+id/element_result_verticalBar"
+        android:layout_marginLeft="8dp"
+        android:background="@color/AppTheme.primaryColor_dark"
+        android:layout_alignBottom="@+id/horizontalScrollView"
+        android:layout_alignTop="@+id/horizontalScrollView">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:id="@+id/element_result_verticalBar2"
+        android:layout_below="@+id/element_result_verticalBar"
+        android:layout_alignBottom="@+id/element_result_horizontalBar2"
+        android:layout_marginLeft="8dp"
+        android:background="@color/AppTheme.primaryColor_dark">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/element_result_horizontalBar2"
+        android:layout_below="@+id/element_result_meanings"
+        android:layout_toRightOf="@+id/element_result_verticalBar2"
+        android:background="@color/AppTheme.dividers"
+        android:layout_marginBottom="16dp">
+    </RelativeLayout>
+
+</RelativeLayout>

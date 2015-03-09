@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   no_result
+Description:            No result View to help solve failed attempt.
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_title"
+        android:id="@+id/no_result_title"
+        android:textSize="30sp"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_subtitle"
+        android:id="@+id/no_result_subtitle"
+        android:layout_below="@+id/no_result_title"
+        android:textSize="20sp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/no_result_horizontalBar1"
+        android:background="@color/AppTheme.dividers"
+        android:layout_below="@+id/no_result_subtitle"
+        android:layout_marginTop="10dp">
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_options"
+        android:id="@+id/no_result_solutions_title"
+        android:layout_below="@+id/no_result_subtitle"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#ff000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_option1"
+        android:id="@+id/no_result_option1"
+        android:layout_below="@+id/no_result_solutions_title"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:singleLine="false"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_option2"
+        android:id="@+id/no_result_option2"
+        android:layout_below="@+id/no_result_option1"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_option3"
+        android:id="@+id/no_result_option3"
+        android:layout_below="@+id/no_result_option2"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/no_result_horizontalBar2"
+        android:background="@color/AppTheme.dividers"
+        android:layout_below="@+id/no_result_option3"
+        android:layout_marginTop="10dp">
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_solutions"
+        android:id="@+id/no_result_solutions"
+        android:layout_below="@+id/no_result_horizontalBar2"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="#ff000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_solution1"
+        android:id="@+id/no_result_solution1"
+        android:layout_below="@+id/no_result_solutions"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:singleLine="false"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_solution2"
+        android:id="@+id/no_result_solution2"
+        android:layout_below="@+id/no_result_solution1"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_solution3"
+        android:id="@+id/no_result_solution3"
+        android:layout_below="@+id/no_result_solution2"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_solution4"
+        android:id="@+id/no_result_solution4"
+        android:layout_below="@+id/no_result_solution3"
+        android:textSize="15sp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/AppTheme.text_base" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_sign_name"
+        android:id="@+id/no_result_sign_name"
+        android:layout_below="@+id/no_result_solution4"
+        android:gravity="right"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/AppTheme.text_base"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_result_sign_department"
+        android:id="@+id/no_result_sign_department"
+        android:layout_below="@+id/no_result_sign_name"
+        android:gravity="right" />
+
+</RelativeLayout>

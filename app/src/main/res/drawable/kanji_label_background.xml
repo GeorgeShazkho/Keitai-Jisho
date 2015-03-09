@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Drawable Resource File: kanji_label_background
+Description:            Background for Kanji label in kanji details.
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#FF000000" />
+            <solid android:color="@color/results_kakaBackground" />
+        </shape>
+    </item>
+
+    <item android:top="1dp" android:bottom="1dp" android:left="-1dp" android:right="-1dp">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="@color/results_kakaBackground" />
+            <solid android:color="@color/results_kakaBackground" />
+        </shape>
+    </item>
+
+</layer-list>

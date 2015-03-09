@@ -1,0 +1,30 @@
+<!--
+KEITAI JISHO PROJECT
+Menu File: menu_results
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.shazkho.utils.keitaijisho.results.ResultsActivity">
+
+    <item
+        android:id="@+id/results_menu_force_reload"
+        android:title="@string/results_menu_reload"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_force_reload"/>
+
+    <item
+        android:id="@+id/results_menu_about"
+        android:title="@string/results_menu_about"
+        android:orderInCategory="2"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_about"/>
+
+</menu>

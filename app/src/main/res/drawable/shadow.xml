@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Drawable Resource File: shadow
+Description:            Shadow definition for Action Bar usage.
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+    
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="90"
+                android:startColor="#00000000"
+                android:endColor="@color/toolbar_shadow"
+                android:type="linear" />
+        </shape>
+    </item>
+</selector>

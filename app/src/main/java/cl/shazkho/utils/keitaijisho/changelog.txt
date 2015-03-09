@@ -1,0 +1,69 @@
+ ____  __.     .__  __         .__       ____.__       .__
+|    |/ _|____ |__|/  |______  |__|     |    |__| _____|  |__   ____
+|      <_/ __ \|  \   __\__  \ |  |     |    |  |/  ___/  |  \ /  _ \
+|    |  \  ___/|  ||  |  / __ \|  | /\__|    |  |\___ \|   Y  (  <_> )
+|____|__ \___  >__||__| (____  /__| \________|__/____  >___|  /\____/
+        \/   \/              \/                      \/     \/
+
+* PROJECT:    Keitai Jisho
+* AUTHOR:     George Shazkho (Anibal Llanos Prado)
+* LICENSE:    Opensource (see www.shazkho.cl/keitaijisho)
+
+
+    ,---.|   |,---.,   .,---.,---.|    ,---.,---.
+    |    |---||---||\  ||  _.|--- |    |   ||  _.
+    |    |   ||   || \ ||   ||    |    |   ||   |
+    `---'`   '`   '`  `'`---'`---'`---'`---'`---'
+---------------------------------------------------------------------------------------------------------------
+| VERSION       | DATE          | CHANGES
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.7 (410)     | 2014/09/03    | Major changes in application backend.
+|               |               | Resource optimization in terms of code and performance.
+|               |               | TTS Utility removed due to poor UI incorporation.
+|               |               | "What's new" section added. Pops on the first use of each version.
+|               |               | New "no results" screen, less formal but more useful.
+|               |               | Web Services greatly improved.
+|               |               | Flexible search mode is implemented (non exact match as results)
+|               |               | Database optimization, improving searches in up to 50% less response time.
+|               |               | Data model changed. Removed multiple objects and stated a single standard.
+|               |               | Improved internal database integration.
+|               |               | Removed "ERROR #" errors on writing system switching.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.6 (285)     | 2014/12/21    | Kanji results reworked completely.
+|               |               | Added navigation, forced reload and about menu buttons to kanji results.
+|               |               | Added cache for kanji results and SVG resources.
+|               |               | Minor bugfix.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.5C (255)    | 12/19/2014    | Results Screen reworked completely.
+|               |               | Web service fix for "little TSU" staring words.
+|               |               | Added better Romaji support.
+|               |               | Removed context menus for Kana<->Romaji conversion.
+|               |               | Removed other context menu elements (replaced by buttons).
+|               |               | Added "up" navigation support.
+|               |               | Force update now in-place.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.5b (209)    | 12/18/2014    | Web service update (bugfix).
+|               |               | Client search task update (bugfix)
+|               |               | Implemented context menu for "results" section.
+|               |               | New section "about" created.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.5a (---)    | Unreleased    | Home screen completely rebuilt.
+|               |               | Removed Voice to Text feature (not working properly)
+|               |               | CHANGES FINALLY APPLIED TO VERSION 0.5b.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.5 (---)     | Unreleased    | Post-initial release fixes, scheduled.
+|               |               | Once 0.5 round is complete, 0.6 version will emerge.
+|               |               | NO REAL CHANGES WERE MADE IN THIS VERSION, JUST PLANNING.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.4 (15)      | 12/16/2014    | First visual patch and some internal optimizations.
+|               |               | This update is the first on a scheduled visual improvements,
+|               |               |   since present UI is not really nice. For this first update,
+|               |               |   the search screen (main screen).
+|               |               | Some minor bugs were corrected.
+|---------------+---------------+------------------------------------------------------------------------------
+| 0.3 (10)      | 12/12/2014    | First public version. Be patient please.
+---------------------------------------------------------------------------------------------------------------
+
+PREVIOUS VERSIONS WERE UNDOCUMENTED AS INTERNAL ALPHA VERSIONS.
+NO REAL VERSIONING UNTIL VERSION 0.5.
+NO PUBLIC VERSIONING UNTIL VERSION 0.7.

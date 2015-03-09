@@ -1,0 +1,45 @@
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   activity_result_detail
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.shazkho.utils.keitaijisho.resultdetails.ResultDetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/result_details_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme.ActionBarStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:title=""
+        android:layout_alignParentTop="true"
+        android:titleTextStyle="@style/AppTheme.ActionBar.TitleTextStyle"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:id="@+id/result_details_shadow"
+        android:layout_below="@+id/result_details_toolbar"
+        android:background="@drawable/shadow">
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_detail_list"
+        android:layout_below="@+id/result_details_shadow"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

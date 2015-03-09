@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   element_gloss
+Description:            Gloss list element as for LinearLayout inflation
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText_short"
+        android:id="@+id/element_gloss_number"
+        android:textSize="14sp"
+        android:textColor="@color/AppTheme.text_secondary_icons"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummyText_medium"
+        android:id="@+id/element_gloss_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/element_gloss_number"
+        android:textSize="14sp"
+        android:textColor="@color/AppTheme.text_base"/>
+</RelativeLayout>

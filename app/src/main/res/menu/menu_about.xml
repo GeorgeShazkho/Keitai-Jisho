@@ -1,0 +1,13 @@
+<!--
+KEITAI JISHO PROJECT
+Menu File: menu_about
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<menu
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.shazkho.utils.keitaijisho.about.AboutActivity">
+</menu>

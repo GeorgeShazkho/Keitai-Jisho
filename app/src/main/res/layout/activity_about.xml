@@ -1,0 +1,224 @@
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   activity_about
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.shazkho.utils.keitaijisho.about.AboutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/about_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme.ActionBarStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:title="@string/title_activity_about"
+        android:layout_alignParentTop="true"
+        android:titleTextStyle="@style/AppTheme.ActionBar.TitleTextStyle"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:id="@+id/results_shadow"
+        android:layout_below="@+id/about_toolbar"
+        android:background="@drawable/shadow">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/results_shadow"
+        android:layout_alignParentRight="true"
+        android:padding="16dp"
+        android:id="@+id/about_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_title_layout">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:id="@+id/about_logo"
+                android:src="@drawable/ic_looooogo"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/title_activity_about"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_title_text"
+                android:id="@+id/about_title"
+                android:layout_toRightOf="@+id/about_logo"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:textSize="24sp"
+                android:textColor="@color/AppTheme.text_base"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView"
+            android:layout_below="@+id/about_title_layout">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/about_details_table"
+                    android:layout_marginTop="16dp">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/about_details_versionRow"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_versionRow_label"
+                            android:id="@+id/about_details_versionRow_label"
+                            android:textColor="@color/AppTheme.text_base"
+                            android:layout_marginRight="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_versionRow_value"
+                            android:id="@+id/about_details_versionRow_value"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/about_details_dateRow"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_dateRow_label"
+                            android:id="@+id/about_details_dateRow_label"
+                            android:textColor="@color/AppTheme.text_base"
+                            android:layout_marginRight="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_dateRow_value"
+                            android:id="@+id/about_details_dateRow_value"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/about_details_authorRow"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_authorRow_label"
+                            android:id="@+id/about_details_authorRow_label"
+                            android:textColor="@color/AppTheme.text_base"
+                            android:layout_marginRight="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_authorRow_value"
+                            android:id="@+id/about_details_authorRow_value"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/about_details_contactRow"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_contactRow_label"
+                            android:id="@+id/about_details_contactRow_label"
+                            android:textColor="@color/AppTheme.text_base"
+                            android:layout_marginRight="16dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_contactRow_value"
+                            android:id="@+id/about_details_contactRow_value"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/about_details_licenseRow"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_licenseRow_label"
+                            android:id="@+id/about_details_licenseRow_label"
+                            android:textColor="@color/AppTheme.text_base"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/about_details_licenseRow_value"
+                            android:id="@+id/about_details_licenseRow_value"/>
+                    </TableRow>
+
+                </TableLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/about_description"
+                    android:layout_below="@+id/about_details_table"
+                    android:paddingTop="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_description_text"
+                        android:id="@+id/about_description_value"
+                        android:textColor="@color/AppTheme.text_base"
+                        android:visibility="gone"/>
+
+                    <WebView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/about_description_webView"
+                        android:layout_margin="0dp"
+                        android:padding="0dp"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

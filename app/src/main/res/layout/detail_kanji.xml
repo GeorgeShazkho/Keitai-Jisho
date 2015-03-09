@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   kanji_details
+Description:            Kanji details list element as for ListView inflation
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="8dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/details_kanji_verticalBar1"
+        android:layout_alignBottom="@+id/details_kanji_kanji"
+        android:background="@color/AppTheme.primaryColor_dark"
+        android:layout_alignTop="@+id/details_kanji_kanji"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="72dp"
+        android:id="@+id/details_kanji_kanji"
+        android:background="@color/AppTheme.primaryColor_dark_light"
+        android:layout_toRightOf="@+id/details_kanji_verticalBar1"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/dummyText_short"
+            android:id="@+id/details_kanji_kanji_text"
+            android:textColor="@color/AppTheme.text_base"
+            android:textSize="48sp"
+            android:gravity="center_vertical"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/detail_kanji_kanji_header"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/details_kanji_titleComplement_string"
+            android:id="@+id/detail_kanji_kanji_header"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textSize="28sp"
+            android:gravity="center_vertical"
+            android:singleLine="false"
+            android:layout_marginRight="16dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/details_kanji_kanji"
+        android:id="@+id/details_kanji_body"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/details_kanji_kanjiInfo"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:layout_toRightOf="@+id/details_kani_verticalBar2"
+            android:background="@color/results_kakaBackground">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/details_kanji_strokeOrder"
+                android:layout_centerVertical="true"
+                android:background="#ffffff"
+                android:contentDescription="@string/title_activity_result_detail"
+                android:layerType="software"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:measureWithLargestChild="false"
+                android:layout_toRightOf="@+id/details_kanji_strokeOrder"
+                android:layout_alignTop="@+id/details_kanji_strokeOrder"
+                android:minHeight="150dp"
+                android:layout_marginLeft="8dp"
+                android:padding="8dp"
+                android:id="@+id/detail_kanji_meanings">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_kanji_meaningsHeader_string"
+                    android:id="@+id/detail_kanji_meaningsHeader"
+                    android:textColor="@color/AppTheme.text_base"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/details_kanji_horizontalBar1"
+            android:background="@color/AppTheme.dividers"
+            android:layout_below="@+id/details_kanji_kanjiInfo"
+            android:layout_toRightOf="@+id/details_kani_verticalBar2">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_kanji_readings"
+            android:layout_below="@+id/details_kanji_horizontalBar1"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:layout_toRightOf="@+id/details_kani_verticalBar2"
+            android:background="@color/results_kakaBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_kanji_readingsText_string"
+                android:id="@+id/detail_kanji_readingsHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_kanji_readingsKunText_string"
+                android:id="@+id/detail_kanji_readingsKun"
+                android:layout_below="@+id/detail_kanji_readingsHeader"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_base"/>
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_kanji_readingOnText_string"
+                android:id="@+id/detail_kanji_readingsOn"
+                android:layout_below="@+id/detail_kanji_readingsKun"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_base"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_readings_kun"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignTop="@+id/detail_kanji_readingsKun"
+                android:layout_toRightOf="@+id/detail_kanji_readingsKun"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_readings_on"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_readingsOn"
+                android:layout_toRightOf="@+id/detail_kanji_readingsOn"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:id="@+id/details_kanji_horizontalBar2"
+            android:layout_below="@+id/detail_kanji_readings"
+            android:background="@color/AppTheme.dividers"
+            android:layout_toRightOf="@+id/details_kani_verticalBar2">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/detail_kanji_other"
+            android:layout_below="@+id/details_kanji_horizontalBar2"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:layout_toRightOf="@+id/details_kani_verticalBar2"
+            android:background="@color/results_kakaBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/details_kanji_otherHeader_string"
+                android:id="@+id/detail_kanji_otherHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_strokes"
+                android:id="@+id/detail_kanji_other_strokecountHeader"
+                android:layout_below="@+id/detail_kanji_otherHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_usage"
+                android:id="@+id/detail_kanji_other_freqHeader"
+                android:layout_below="@+id/detail_kanji_other_strokecountHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_skip"
+                android:id="@+id/detail_kanji_other_skipHeader"
+                android:layout_below="@+id/detail_kanji_other_freqHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_turtle"
+                android:id="@+id/detail_kanji_other_shdescHeader"
+                android:layout_below="@+id/detail_kanji_other_skipHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_4corner"
+                android:id="@+id/detail_kanji_other_fourcornerHeader"
+                android:layout_below="@+id/detail_kanji_other_shdescHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="@string/details_deroo"
+                android:id="@+id/detail_kanji_other_derooHeader"
+                android:layout_below="@+id/detail_kanji_other_fourcornerHeader"
+                android:textColor="@color/AppTheme.text_base"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_other_strokecount"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_other_strokecountHeader"
+                android:layout_toRightOf="@+id/detail_kanji_other_strokecountHeader"
+                android:typeface="monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_other_freq"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_other_freqHeader"
+                android:layout_toRightOf="@+id/detail_kanji_other_freqHeader"
+                android:typeface="monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_other_skip"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_other_skipHeader"
+                android:layout_toRightOf="@+id/detail_kanji_other_skipHeader"
+                android:typeface="monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_other_shdesc"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_other_shdescHeader"
+                android:layout_toRightOf="@+id/detail_kanji_other_shdescHeader"
+                android:typeface="monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_other_fourcorner"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_other_fourcornerHeader"
+                android:layout_toRightOf="@+id/detail_kanji_other_fourcornerHeader"
+                android:typeface="monospace"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummyText_medium"
+                android:id="@+id/detail_kanji_other_daroo"
+                android:textSize="14sp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/detail_kanji_other_derooHeader"
+                android:layout_toRightOf="@+id/detail_kanji_other_derooHeader"
+                android:typeface="monospace"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="4dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/details_kani_verticalBar2"
+            android:background="@color/AppTheme.primaryColor_dark"
+            android:layout_alignBottom="@+id/details_kanji_horizontalBar3"
+            android:layout_marginLeft="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/detail_kanji_other"
+            android:id="@+id/details_kanji_horizontalBar3"
+            android:background="@color/AppTheme.dividers"
+            android:layout_toRightOf="@+id/details_kani_verticalBar2"
+            android:layout_marginBottom="16dp">
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

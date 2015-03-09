@@ -1,0 +1,126 @@
+<resources>
+
+    <string name="action_settings">Configuración</string>
+    <string name="details_kanji_meaningsHeader_string">SIGNIFICADOS</string>
+    <string name="details_kanji_readingsText_string">LECTURAS</string>
+    <string name="details_kanji_titleComplement_string">Detalles para</string>
+    <string name="details_4corner">4-Corner:</string>
+    <string name="details_deroo">Deroo:</string>
+    <string name="details_kanji_otherHeader_string">OTRA INFORMACIÓN</string>
+    <string name="details_skip">SKIP:</string>
+    <string name="details_strokes">Trazos:</string>
+    <string name="details_turtle">Turtle:</string>
+    <string name="details_usage">Uso:</string>
+    <string name="results_element_glossHeader_text">SIGNIFICADOS</string>
+    <string name="search_buttons_search">Buscar</string>
+    <string name="search_clear">LIMPIAR</string>
+    <string name="search_config_title_text">En inglés</string>
+    <string name="search_searchBox_hint">Busca aquí</string>
+    <string name="search_searchBox_title_text">Se permite kanji, kana y romaji</string>
+    <string name="title_activity_result_detail">Detalle kanji</string>
+    <string name="title_activity_results">Resultados de búsqueda</string>
+    <string name="search_general_dict">Diccionario  general</string>
+    <string name="result_tts_error1">ERROR TTS: Idioma no soportado</string>
+    <string name="search_header_image_hint">Cabecera</string>
+    <string name="search_config_title_text_land">Buscar en inglés</string>
+    <string name="result_tts_error2">ERROR TTS: No se pudo iniciar el servicio.</string>
+    <string name="results_menu_about">Acerca de</string>
+    <string name="results_menu_reload">Forzar carga de datos</string>
+    <string name="title_activity_about">Acerca de Keitai Jisho</string>
+    <string name="about_details_versionRow_label">Versión:</string>
+    <string name="about_details_dateRow_label">Fecha compilación:</string>
+    <string name="about_details_contactRow_label">Contacto:</string>
+    <string name="about_details_authorRow_label">Autor:</string>
+    <string name="about_description_text">From japanese terms \'keitai\' (mobile) and \'jisho\' (dictionary). KEITAI JISHO is a project, driven by George Shazkho, which objective is to be a simple and useful tool for non-native japanese speakers. It has been built natively on Java (using Android Studio IDE and Android SDK tools), and it\'s based on some open source projects:</string>
+    <string name="about_description_text_html"><![CDATA[
+        <html>
+            <head>
+                <meta charset="UTF-8"/>
+                <style type="text/css">
+                    body {
+                      margin-left:      0;
+                      margin-right:     0;
+                      padding-left:     0;
+                      padding-right:    0;
+                    }
+                    a:link, a:visited, a:hover, a:active {
+                      text-decoration:  none;
+                      color:            #8c1c1c;
+                    }
+                    li {
+                      margin-bottom:    10px;
+                    }
+                </style>
+            </head>
+            <body style="text-align:justify">
+                <strong>携帯 (keitai):</strong> Móvil (portátil)<br>
+                <strong>辞書 (jisho):</strong> Diccionario<br><br>
+                Keitai Jisho (diccionario móvil) es un proyecto de acceso gratuito, llevado a cabo por George Shazkho, cuyo objetivo es el ser una herramienta simple y útil para los hablantes no-nativos del japonés.<br>
+                Ha sido construido nativamente en Java (usando el IDE Android Studio y las herramientas del SDK de Android), y está basado en algunos proyectos de software libre:
+                <ul>
+                    <li><a href="http://jsoup.org">JSoup</a>: Librería de código abierto (Licencia MIT). Usado para parsear XML y HTML.</li>
+                    <li><a href="https://code.google.com/p/svg-android-2/">svg-android-2</a>: Librería de código abierto (Licencia Apache 2.0). Usada para mostrar imágenes SVG (orden de los trazos de los kanji).</li>
+                    <li><a href="http://www.edrdg.org/jmdict/edict.html">EDICT</a>: Diccionario de uso libre (Creative Commons v3.0). Usado como el diccionario principal de la aplicación (búsquedas basadas en conceptos).</li>
+                    <li><a href="http://www.csse.monash.edu.au/~jwb/kanjidic.html">KANJIDICT</a>: Diccionario de uso libre (Creative Commons v3.0). Usado como el diccionario específico de kanji (búsqueda basada en kanji).</li>
+                    <li><a href="http://kanjivg.tagaini.net/">KanjiVG</a>: Colección de uso libre (Creative Commons v3.0). Usado como fuente del orden de los trazos para las búsquedas basadas en kanji.</li>
+                    <li>WanaKanaJava: Clase de ayuda para la traducción de palabras a Romaji. Licenciada MIT.</li>
+                </ul>
+            </body>
+        </html>]]>
+    </string>
+    <string name="about_details_licenseRow_label">Licencia</string>
+    <string name="about_details_licenseRow_value">Pendiente</string>
+    <string name="search_async_searching">Buscando…</string>
+    <string name="search_error_english_kana">Búsqueda en inglés sólo puede tener carácteres romanos.</string>
+    <string name="search_error_mixed">Búsqueda no puede incluir Romaji y (Kana o Kanji) a la vez.</string>
+    <string name="search_error_spaces">Búsqueda no puede contener espacios.</string>
+    <string name="whatsnew_changelog"><![CDATA[
+        <html>
+            <head>
+                <meta charset="utf-8"/>
+                <style type="text/css">
+                    li {
+                      margin-left:    -10px;
+                    }
+                </style>
+            </head>
+            <body>
+                <b>NOTA DEL DESARROLLADOR:</b> Puede que no lo notes, pero cambiamos MUCHO desde la versión 0.6!. Mejor desempeño, disminución de 15\%% a 2\%% en la aparición errores en peticiones web, mas liviana, rápida y… aun GRÁTIS (ahora y por siempre!).<br/>
+                <br/>
+                <b>CAMBIOS RECIENTES (09/03/2015):</b><br/>
+                <ul>
+                    <li>Funcionamiento de la aplicación completamente re-diseñado y re-escrito.</li>
+                    <li>Nueva interfaz de "no se encontró resultado". Menos formal, mas informativa.</li>
+                    <li>Montones de basura se removieron de todas partes.</li>
+                    <li>Servicios web re-diseñados y re-escritos.</li>
+                    <li>Núcleo de la aplicación mejorado, generalizado y hecho extensible.</li>
+                    <li>Se agrega el historial de cambios para el primer uso de cada versión como una medida para mejorar la comunicación entre nosotros :).</li>
+                    <li>Optimizacion de la base de datos, reduciendo enormemente el tiempo de espera y de respuesta.</li>
+                    <li>Eliminados casi todos los errores en los resultados de las consultas web.</li>
+                    <li>Se desactiva temporalmente el servicio de TTS (Text-To-Speech : Texto a Voz para lectura de Kanas), esperando a la siguiente versión para optimizar su incorporación en la interfaz gráfica.</li>
+                </ul>
+                <br/>
+                <b>SEGUNDA NOTA DEL DESARROLLADOR:</b> Si llegaste hasta acá es porque te interesa esto. Gracias a ti y a toda la gente que ha instalado espontáneamente la aplicación, espero satisfacer sus expectativas ahora y en cada versión futura.<br/>
+                <br/>
+                Visiten <a href="http://www.shazkho.cl/keitaijisho">LA WEB OFICIAL</a> para mayor información respecto del proyecto.
+            </body>
+        </html>
+    ]]></string>
+    <string name="whatsnew_changelog_title">Keitai Jisho es ahora 0.7</string>
+    <string name="whatsnew_title">HEY! Mira esto!</string>
+    <string name="whatsnew_button">Ir a la app</string>
+    <string name="no_result_option1">1. Jisho odia MAL ESCRITO</string>
+    <string name="no_result_option2">2. Jisho ama PALABRA sola</string>
+    <string name="no_result_option3">3. Jisho ama INFINITIVO</string>
+    <string name="no_result_options">¡¡Por queee !!</string>
+    <string name="no_result_sign_department">Departamento de clientes decepcionados.</string>
+    <string name="no_result_solution1">1. Recargar (arriba, flecha circular).</string>
+    <string name="no_result_solution2">2. Reintentar (arriba, flecha atras).</string>
+    <string name="no_result_solution3">3. Revisa tu conexión a internet.</string>
+    <string name="no_result_solution4">4. Cambia palabra… o a nosotros :(</string>
+    <string name="no_result_solutions">¿Que puedo hacer?</string>
+    <string name="no_result_subtitle">Parece que hemos fallado en ayudarte a ser asombroso! :(</string>
+    <string name="no_result_title">Ups!</string>
+    <string name="orientation">port</string>
+
+</resources>

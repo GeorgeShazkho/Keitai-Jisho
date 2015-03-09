@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Layout Resource File:   whatsnew
+Description:            What's New View fot ViewStub usage
+
+@version    0.7
+@author     George Shazkho
+@date       March 09, 2015
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9c000000">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/AppTheme.primaryColor_dark_light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whatsnew_title"
+            android:id="@+id/whatsnew_title"
+            android:textColor="#ffffffff"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/whatsnew_details"
+            android:layout_below="@+id/whatsnew_title"
+            android:layout_alignParentBottom="false"
+            android:background="#ffc5c5c5"
+            android:padding="5dp"
+            android:layout_above="@+id/whatsnew_button"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/whatsnew_changelog_title"
+                    android:id="@+id/whatsnew_changelog_title"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/AppTheme.primaryColor_dark"
+                    android:typeface="normal"
+                    android:layout_marginTop="10dp" />
+
+                <WebView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/whatsnew_changelog" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/whatsnew_button"
+            android:id="@+id/whatsnew_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/button_white_shadow"
+            style="@style/AppTheme.buttonAccent.inverse" />
+    </RelativeLayout>
+</RelativeLayout>
