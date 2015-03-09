@@ -1,19 +1,46 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.android.application'
 
-buildscript {
-    repositories {
-        jcenter()
+android {
+    signingConfigs {
+        keitaijishoSignature {
+            keyAlias 'KEY_KEITAI_JISHO'
+            keyPassword '$Variable204'
+            storeFile file('C:/Anibal/Proyectos/Android/Keitai Jisho External Files/Keystore/keystore.jks')
+            storePassword '$Variable204'
+        }
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0-rc4'
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "cl.shazkho.utils.keitaijisho"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 410
+        versionName "0.7"
+        signingConfig signingConfigs.keitaijishoSignature
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release2 {
+            debuggable false
+            jniDebuggable false
+            signingConfig signingConfigs.keitaijishoSignature
+            renderscriptDebuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+    }
+    productFlavors {
     }
 }
 
-allprojects {
-    repositories {
-        jcenter()
-    }
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('libs/svgAndroid2-3Jan2014.jar')
 }

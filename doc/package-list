@@ -1,0 +1,10 @@
+cl.shazkho.utils.keitaijisho.about
+cl.shazkho.utils.keitaijisho.database
+cl.shazkho.utils.keitaijisho.objects
+cl.shazkho.utils.keitaijisho.objects.custom
+cl.shazkho.utils.keitaijisho.objects.sqlite.helper
+cl.shazkho.utils.keitaijisho.objects.sqlite.model
+cl.shazkho.utils.keitaijisho.resultdetails
+cl.shazkho.utils.keitaijisho.results
+cl.shazkho.utils.keitaijisho.search
+cl.shazkho.utils.keitaijisho.tools
