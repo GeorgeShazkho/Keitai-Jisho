@@ -58,7 +58,6 @@
                 Keitai Jisho (diccionario móvil) es un proyecto de acceso gratuito, llevado a cabo por George Shazkho, cuyo objetivo es el ser una herramienta simple y útil para los hablantes no-nativos del japonés.<br>
                 Ha sido construido nativamente en Java (usando el IDE Android Studio y las herramientas del SDK de Android), y está basado en algunos proyectos de software libre:
                 <ul>
-                    <li><a href="http://jsoup.org">JSoup</a>: Librería de código abierto (Licencia MIT). Usado para parsear XML y HTML.</li>
                     <li><a href="https://code.google.com/p/svg-android-2/">svg-android-2</a>: Librería de código abierto (Licencia Apache 2.0). Usada para mostrar imágenes SVG (orden de los trazos de los kanji).</li>
                     <li><a href="http://www.edrdg.org/jmdict/edict.html">EDICT</a>: Diccionario de uso libre (Creative Commons v3.0). Usado como el diccionario principal de la aplicación (búsquedas basadas en conceptos).</li>
                     <li><a href="http://www.csse.monash.edu.au/~jwb/kanjidic.html">KANJIDICT</a>: Diccionario de uso libre (Creative Commons v3.0). Usado como el diccionario específico de kanji (búsqueda basada en kanji).</li>
@@ -87,7 +86,12 @@
             <body>
                 <b>NOTA DEL DESARROLLADOR:</b> Puede que no lo notes, pero cambiamos MUCHO desde la versión 0.6!. Mejor desempeño, disminución de 15\%% a 2\%% en la aparición errores en peticiones web, mas liviana, rápida y… aun GRÁTIS (ahora y por siempre!).<br/>
                 <br/>
-                <b>CAMBIOS RECIENTES (09/03/2015):</b><br/>
+                <b>CAMBIOS v0.7.1 (03/10/2015):</b><br/>
+                <ul>
+                    <li>Correjido bug en traducción a Romaji y aparición del hint (en la lista de resultados)</li>
+                    <li>Correcciones mínimas debidas al cambio de versión.</li>
+                </ul>
+                <b>CAMBIOS v0.7 (03/09/2015):</b><br/>
                 <ul>
                     <li>Funcionamiento de la aplicación completamente re-diseñado y re-escrito.</li>
                     <li>Nueva interfaz de "no se encontró resultado". Menos formal, mas informativa.</li>
@@ -106,7 +110,7 @@
             </body>
         </html>
     ]]></string>
-    <string name="whatsnew_changelog_title">Keitai Jisho es ahora 0.7</string>
+    <string name="whatsnew_changelog_title">Keitai Jisho es ahora 0.7.1</string>
     <string name="whatsnew_title">HEY! Mira esto!</string>
     <string name="whatsnew_button">Ir a la app</string>
     <string name="no_result_option1">1. Jisho odia MAL ESCRITO</string>

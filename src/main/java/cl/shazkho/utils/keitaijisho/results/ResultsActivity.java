@@ -41,7 +41,7 @@ import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
  * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.7
+ * @version 0.7.1
  * @since 2015-03-06
  */
 public class ResultsActivity extends CustomActionBarActivity implements TextToSpeech.OnInitListener, StaticHelpers, View.OnClickListener {
@@ -86,6 +86,7 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
             if ( home.length() != 0 ) {
                 mAdapter = new ResultListAdapter(this, mResponseObject);
                 mResultList.setAdapter(mAdapter);
+                tryToShowHint();
             } else {
                 LinearLayout no_result = (LinearLayout) findViewById(R.id.results_no_result_layout);
                 no_result.removeAllViews();
@@ -98,20 +99,6 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
             Log.e("Search List Adapter", e.toString());
             e.printStackTrace();
         }
-
-        // Hint Spawn
-
-        SharedPreferences preferences = getSharedPreferences("main_preferences", 0);
-        boolean is_kanji_hint_disposed = preferences.getBoolean("is_kanji_hint_disposed", false);
-        if ( !is_kanji_hint_disposed ) {
-            RelativeLayout hint = (RelativeLayout) findViewById(R.id.results_hint);
-            RelativeLayout hintBackground = (RelativeLayout) findViewById(R.id.results_hint_background);
-            hint.setVisibility(View.VISIBLE);
-            hintBackground.setVisibility(View.VISIBLE);
-            Button hintButton = (Button) findViewById(R.id.result_hint_button);
-            hintButton.setOnClickListener(this);
-        }
-
 
     }
 
@@ -126,7 +113,7 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
 		int id = item.getItemId();
 		switch(id){
 			case R.id.results_menu_force_reload:
-                DatabaseManager  manager = new DatabaseManager(this);
+                DatabaseManager manager = new DatabaseManager(this);
                 manager.query( mResponseObject, true );
 				break;
 			case R.id.results_menu_about:
@@ -167,6 +154,24 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
 	}
 
 
+    // CLASS SPECIFIC METHODS
+
+    /**
+     * Tries to show a hint over the result list.
+     */
+    private void tryToShowHint () {
+        SharedPreferences preferences = getSharedPreferences("main_preferences", 0);
+        boolean is_kanji_hint_disposed = preferences.getBoolean("is_kanji_hint_disposed", false);
+        if ( !is_kanji_hint_disposed ) {
+            RelativeLayout hint = (RelativeLayout) findViewById(R.id.results_hint);
+            RelativeLayout hintBackground = (RelativeLayout) findViewById(R.id.results_hint_background);
+            hint.setVisibility(View.VISIBLE);
+            hintBackground.setVisibility(View.VISIBLE);
+            Button hintButton = (Button) findViewById(R.id.result_hint_button);
+            hintButton.setOnClickListener(this);
+        }
+    }
+
 	// OVERRIDDEN METHOD PROM PARENT CLASS 'CustomActionBarActivity'
 
     @Override
@@ -181,6 +186,7 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
                 if ( home.length() != 0 ) {
                     mAdapter = new ResultListAdapter(this, mResponseObject);
                     mResultList.setAdapter(mAdapter);
+                    tryToShowHint();
                 } else {
                     LinearLayout no_result = (LinearLayout) findViewById(R.id.results_no_result_layout);
                     no_result.removeAllViews();

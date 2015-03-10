@@ -43,7 +43,7 @@ Layout Resource File:   activity_results
         android:layout_below="@+id/results_toolbar"
         android:layout_marginTop="16dp"
         android:background="#ffffffff"
-        android:visibility="visible"/>
+        android:visibility="gone"/>
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -52,7 +52,7 @@ Layout Resource File:   activity_results
         android:layout_below="@+id/results_toolbar"
         android:gravity="bottom|center_horizontal"
         android:background="@color/transparent"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="48dp"

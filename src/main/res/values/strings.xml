@@ -19,7 +19,7 @@
     <string name="dummyText_medium" translatable="false">%DUMMY%</string>
     <string name="dummyText_large" translatable="false">$THIS_IS_A_REALLY_LONG_DUMMY%</string>
     <string name="search_async_searching">Searching…</string>
-    <string name="version" translatable="false">0.7</string>
+    <string name="version" translatable="false">0.7.1</string>
 
 
     <!-- Search Activity -->
@@ -74,9 +74,9 @@
     <string name="title_activity_about">About Keitai Jisho</string>
     <string name="about_title_text" translatable="false">KEITAI JISHO</string>
     <string name="about_details_versionRow_label">Version:</string>
-    <string name="about_details_versionRow_value" translatable="false">0.7 (410)</string>
+    <string name="about_details_versionRow_value" translatable="false">0.7.1 (415)</string>
     <string name="about_details_dateRow_label">Build date:</string>
-    <string name="about_details_dateRow_value" translatable="false">2015–03–09</string>
+    <string name="about_details_dateRow_value" translatable="false">2015–03–10</string>
     <string name="about_details_authorRow_label">Author:</string>
     <string name="about_details_authorRow_value" translatable="false">George Shazkho</string>
     <string name="about_details_contactRow_label">Contact:</string>
@@ -108,7 +108,6 @@
                 Keitai Jisho (mobile dictionary) is a free to use project, driven by George Shazkho, which objective is to be a simple and useful tool for non-native japanese speakers.<br>
                 It has been built natively on Java (using Android Studio IDE and Android SDK tools), and it\'s based on some open source projects:
                 <ul>
-                    <li><a href="http://jsoup.org">JSoup</a>: Open source library (MIT license). Used to parse XML and HTML</li>
                     <li><a href="https://code.google.com/p/svg-android-2/">svg-android-2</a>: Open source library (Apache 2.0 liense). Used to display SVG images (kanji stroke order).</li>
                     <li><a href="http://www.edrdg.org/jmdict/edict.html">EDICT</a>: Free to use dictionary (Creative Commons v3.0). Used as the main dictionary on this app (term-based search).</li>
                     <li><a href="http://www.csse.monash.edu.au/~jwb/kanjidic.html">KANJIDICT</a>: Free to use dictionary (Creative Commons v3.0). Used as the kanji-specific dictionary (kanji-based search).</li>
@@ -137,7 +136,12 @@
             <body>
                 <b>DEVELOPER\'S NOTE:</b> You may not notice it, but we changed A LOT since 0.6!. Better performance, 15\%% to 2\%% decreased error spawn on web requests, better performance, lighter, faster… and still FREE (now and for ever!).<br/>
                 <br/>
-                <b>RECENT CHANGES (03/09/2015):</b><br/>
+                <b>v0.7.1 CHANGES (03/10/2015):</b><br/>
+                <ul>
+                    <li>Corrected bug in romaji translation, hint spawn (result list)</li>
+                    <li>Minimal correction due to version change.</li>
+                </ul>
+                <b>v0.7 CHANGES (03/09/2015):</b><br/>
                 <ul>
                     <li>Application backend completely re-designed and re-written.</li>
                     <li>New "no results found" interface, less formal, more informative.</li>
@@ -156,7 +160,7 @@
             </body>
         </html>]]>
     </string>
-    <string name="whatsnew_changelog_title">Keitai Jisho is now 0.7</string>
+    <string name="whatsnew_changelog_title">Keitai Jisho is now 0.7.1</string>
     <string name="whatsnew_title">HEY! Look at this!</string>
     <string name="whatsnew_button">Go to app</string>
 

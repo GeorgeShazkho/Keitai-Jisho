@@ -1,17 +1,12 @@
 package cl.shazkho.utils.keitaijisho.tools;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  StaticHelpers
- * Package: cl.shazkho.utils.keitaijisho.tools
- * ***************************************
  * Helper interface. It features int and String definitions for some commonly used
  * configurations and objects.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 09, 2015
+ * @version 0.7
+ * @since 2015 03-09
  */
 public interface StaticHelpers {
 

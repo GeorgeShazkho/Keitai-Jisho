@@ -3,22 +3,18 @@ package cl.shazkho.utils.keitaijisho.tools;
 import java.util.HashMap;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  JapaneseWritingHelper
- * Package: cl.shazkho.utils.keitaijisho.tools
- * ***************************************
  * Helper class to hel manage japanese writing systems.
- * ***************************************
- * IMPORTANT AUTHOR INFORMATION!!
+
+ * <b>IMPORTANT AUTHOR INFORMATION!!</b>
  *
- * Some of the functions implemented on the current script ARE NOT MY OWN WORK.
+ * <p>Some of the functions implemented on the current script ARE NOT MY OWN WORK.
  * In particular, methods 'toRoma', 'katakanaToHiragana' and 'prepareJtoR' are
- * part of the project WANA KANA JAVA, MIT Licensed by Matthew Miller on 2013.
+ * part of the project WANA KANA JAVA, MIT Licensed by Matthew Miller on 2013.</p>
  *
  * @author Matthew Miller
  * @author George Shazkho
- * @version 0.7 - March 09, 2015
+ * @version 0.7.1
+ * @since 2015-03-09
  */
 public class JapaneseWritingHelper implements StaticHelpers {
 
@@ -217,7 +213,7 @@ public class JapaneseWritingHelper implements StaticHelpers {
                 }
                 romaChar = mJtoR.get(chunk);
                 if ((romaChar != null) && nextCharIsDoubleConsonant) {
-                    romaChar += romaChar.charAt(0);
+                    romaChar = romaChar.charAt(0) + romaChar;
                     nextCharIsDoubleConsonant = false;
                 }
                 if (romaChar != null) {
