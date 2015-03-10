@@ -19,16 +19,11 @@ import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  JsonAsyncTask
- * Defined in -> cl.shazkho.utils.keitaijisho.database
- * ***************************************
  * General asynchronous task to retrieve JSON response from the web service.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 04, 2015
+ * @version 0.7
+ * @since 2015-03-04
  */
 public class JsonAsyncTask extends AsyncTask<Void, Integer, Object> implements StaticHelpers {
 

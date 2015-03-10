@@ -35,11 +35,71 @@ Layout Resource File:   activity_results
         android:background="@drawable/shadow">
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/results_hint_background"
+        android:layout_below="@+id/results_toolbar"
+        android:layout_marginTop="16dp"
+        android:background="#ffffffff"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:id="@+id/results_hint"
+        android:layout_below="@+id/results_toolbar"
+        android:gravity="bottom|center_horizontal"
+        android:background="@color/transparent"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/result_hint_icon"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:src="@mipmap/ic_alert"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-10dp"
+            android:contentDescription="@string/activity_results_hint_icon_description" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="@string/activity_results_hint_text"
+            android:id="@+id/result_hint_text"
+            android:gravity="center"
+            android:textColor="@color/AppTheme.text_secondary_icons"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/result_hint_icon"
+            android:layout_marginRight="15dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/activity_results_hint_button"
+            android:id="@+id/result_hint_button"
+            android:layout_toRightOf="@+id/result_hint_text"
+            android:background="#ffdfdfdf"
+            android:textSize="14sp"
+            android:textColor="#ff000000"
+            android:layout_alignTop="@+id/result_hint_icon"
+            android:layout_alignBottom="@+id/result_hint_icon"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+    </RelativeLayout>
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/results_list"
-        android:layout_below="@+id/results_toolbar"
+        android:layout_below="@+id/results_hint"
         android:layout_alignParentBottom="true"
         android:dividerHeight="0dp"
         android:divider="@drawable/null_drawable"/>
@@ -54,7 +114,7 @@ Layout Resource File:   activity_results
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/results_no_result_layout"></LinearLayout>
+            android:id="@+id/results_no_result_layout"/>
     </ScrollView>
 
 </RelativeLayout>

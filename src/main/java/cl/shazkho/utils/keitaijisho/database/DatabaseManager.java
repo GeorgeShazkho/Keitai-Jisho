@@ -11,16 +11,11 @@ import cl.shazkho.utils.keitaijisho.objects.sqlite.model.Tuple;
 import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  DatabaseManager
- * Defined in -> cl.shazkho.utils.keitaijisho.database
- * ***************************************
  * Controls database requests flux.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 04, 2015
+ * @version 0.7
+ * @since 2015-03-04
  */
 public class DatabaseManager implements StaticHelpers {
 

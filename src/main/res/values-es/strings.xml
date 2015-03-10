@@ -69,7 +69,7 @@
         </html>]]>
     </string>
     <string name="about_details_licenseRow_label">Licencia</string>
-    <string name="about_details_licenseRow_value">Pendiente</string>
+    <string name="about_details_licenseRow_value">Licencia Apache, Versión 2.0</string>
     <string name="search_async_searching">Buscando…</string>
     <string name="search_error_english_kana">Búsqueda en inglés sólo puede tener carácteres romanos.</string>
     <string name="search_error_mixed">Búsqueda no puede incluir Romaji y (Kana o Kanji) a la vez.</string>
@@ -122,5 +122,7 @@
     <string name="no_result_subtitle">Parece que hemos fallado en ayudarte a ser asombroso! :(</string>
     <string name="no_result_title">Ups!</string>
     <string name="orientation">port</string>
+    <string name="activity_results_hint_icon_description">Ayuda</string>
+    <string name="activity_results_hint_text">TOCA UN KANJI PARA VER MAS INFORMACIÓN</string>
 
 </resources>

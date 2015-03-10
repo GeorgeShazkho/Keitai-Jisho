@@ -81,11 +81,11 @@ Description:            Result list element as for ListView inflation
         <RelativeLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="52dp"
             android:id="@+id/element_result_kanji_label"
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="false"
+            android:layout_alignParentTop="true"
             >
 
             <TextView

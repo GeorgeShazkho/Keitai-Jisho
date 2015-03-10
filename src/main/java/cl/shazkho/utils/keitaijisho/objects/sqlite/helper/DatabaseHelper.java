@@ -13,16 +13,11 @@ import java.util.List;
 import cl.shazkho.utils.keitaijisho.objects.sqlite.model.Tuple;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  DatabaseHelper
- * Defined in -> cl.shazkho.utils.keitaijisho.objects
- * ***************************************
  * SQLite helper class. Main class to b called when Database interactions are needed.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 09, 2015
+ * @version 0.7
+ * @since 2015-03-09
  */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -30,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	// DATABASE SETUP
 	static private final String DATABASE_NAME = "userSettings";
-	static private final int DATABASE_VERSION = 16;
+	static private final int DATABASE_VERSION = 18;
 
 	// TABLE NAMES
 	static private final String TABLE_SEARCH = "search";

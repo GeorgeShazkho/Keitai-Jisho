@@ -36,18 +36,19 @@ import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
 import cl.shazkho.utils.keitaijisho.results.ResultsActivity;
 import cl.shazkho.utils.keitaijisho.tools.JapaneseWritingHelper;
 
+
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  SearchActivity
- * Defined in -> cl.shazkho.utils.keitaijisho.search
- * ***************************************
- * This is the main activity. It's basically a search-only activity. Uses data collected from the
- * form and uses it to send a retrieval task, searching for japanese concept matches.
- * ***************************************
+ * <p>This is the main activity. It's basically a search-only activity. Uses data collected from the
+ * form and uses it to send a retrieval task, searching for japanese concept matches.</p>
+ *
+ * <p>Keitai Jisho Activities works using a simple abstraction
+ * of the Activity Class, more precisely, it uses the
+ * ActionBarActivity Class to have compatibility with
+ * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.7 - March 8, 2015
+ * @version 0.7
+ * @since 2015-03-08
  */
 public class SearchActivity extends CustomActionBarActivity	implements View.OnClickListener, View.OnFocusChangeListener, TextWatcher, TextView.OnEditorActionListener, Animation.AnimationListener {
 

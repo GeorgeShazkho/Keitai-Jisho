@@ -11,17 +11,18 @@ import android.widget.TextView;
 import cl.shazkho.utils.keitaijisho.R;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
 
+
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  AboutActivity
- * Defined in -> cl.shazkho.utils.keitaijisho.search
- * ***************************************
- * In this activity are only the credits.
- * ***************************************
+ * Application's information Activity.
+ *
+ * <p>Keitai Jisho Activities works using a simple abstraction
+ * of the Activity Class, more precisely, it uses the
+ * ActionBarActivity Class to have compatibility with
+ * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.5b - December 18, 2014
+ * @version 0.5b
+ * @since 2014-12-18
  */
 public class AboutActivity extends CustomActionBarActivity {
 

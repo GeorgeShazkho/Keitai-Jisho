@@ -18,17 +18,18 @@ import cl.shazkho.utils.keitaijisho.database.DatabaseManager;
 import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
 
+
 /**
- * *************************************
- * PROJECT: Keitai Jisho
- * MODULE:  ResultDetailActivity
- * Defined in -> cl.shazkho.utils.keitaijisho.resultdetails
- * ***************************************
  * It shows detailed information about selected kanji word (together and separated).
- * ***************************************
+ *
+ * <p>Keitai Jisho Activities works using a simple abstraction
+ * of the Activity Class, more precisely, it uses the
+ * ActionBarActivity Class to have compatibility with
+ * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.6 - December 21, 2014
+ * @version 0.6
+ * @since 2014-12-21
  */
 public class ResultDetailActivity extends CustomActionBarActivity {
 
@@ -36,7 +37,6 @@ public class ResultDetailActivity extends CustomActionBarActivity {
 	// INSTANCE VARIABLES
 
     private ResponseObject mResponseObject;
-    private ResponseObject mOrigin;
     private DetailsListAdapter mAdapter;
 
 
@@ -62,7 +62,6 @@ public class ResultDetailActivity extends CustomActionBarActivity {
 		// Receiving intent
 		Intent intent = getIntent();
         mResponseObject = intent.getParcelableExtra("result");
-        mOrigin = intent.getParcelableExtra("origin");
         Log.i("Result Activity", "Intent received with data: " + mResponseObject.getmKey().toUpperCase() + ", " + mResponseObject.getmDatabase().toUpperCase());
 
         // Inflating
@@ -87,8 +86,9 @@ public class ResultDetailActivity extends CustomActionBarActivity {
 				break;
 			case android.R.id.home:
 				Intent upIntent = NavUtils.getParentActivityIntent(this);
-				upIntent.putExtra("result", mOrigin);
-				if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
+				//upIntent.putExtra("result", mOrigin);
+                upIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
 					TaskStackBuilder.create(this)
 						.addNextIntentWithParentStack(upIntent)
 						.startActivities();

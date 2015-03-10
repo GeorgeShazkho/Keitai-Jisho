@@ -1,16 +1,12 @@
 package cl.shazkho.utils.keitaijisho.objects.sqlite.model;
 
+
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  Tuple
- * Defined in -> cl.shazkho.utils.keitaijisho.objects.sqlite.model
- * ***************************************
  * SQLite helper class. Base class, extended by tuple-specific classes.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.3 - December 11, 2014
+ * @version 0.3
+ * @since 2014-12-11
  */
 public class Tuple {
 

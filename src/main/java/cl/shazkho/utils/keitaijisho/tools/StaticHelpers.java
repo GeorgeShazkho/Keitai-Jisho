@@ -4,7 +4,7 @@ package cl.shazkho.utils.keitaijisho.tools;
  * *************************************
  * PROJECT: KEITAI JISHO
  * MODULE:  StaticHelpers
- * Defined in -> cl.shazkho.utils.keitaijisho.tools
+ * Package: cl.shazkho.utils.keitaijisho.tools
  * ***************************************
  * Helper interface. It features int and String definitions for some commonly used
  * configurations and objects.

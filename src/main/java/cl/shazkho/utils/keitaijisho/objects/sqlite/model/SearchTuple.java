@@ -1,16 +1,11 @@
 package cl.shazkho.utils.keitaijisho.objects.sqlite.model;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  SearchTuple
- * Defined in -> cl.shazkho.utils.keitaijisho.objects.sqlite.model
- * ***************************************
  * SQLite helper class. Abstracts behaviour of "Search" table in the database.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.3 - December 11, 2014
+ * @version 0.3
+ * @since 2014-12-11
  */
 public class SearchTuple extends Tuple {
 

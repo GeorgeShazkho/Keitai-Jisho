@@ -3,17 +3,13 @@ package cl.shazkho.utils.keitaijisho.objects;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  ResponseObject
- * Defined in -> cl.shazkho.utils.keitaijisho.objects
- * ***************************************
  * Custom object. Standard database query result.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 03, 2015
+ * @version 0.7
+ * @since 2015-03-03
  */
 public class ResponseObject implements Parcelable {
 

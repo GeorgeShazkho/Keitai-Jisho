@@ -24,17 +24,13 @@ import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
 import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
+
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  DetailsListAdapter
- * Defined in -> cl.shazkho.utils.keitaijisho.resultdetails
- * ***************************************
  * Handles details list inflation.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 08, 2015
+ * @version 0.7
+ * @since 2015-03-08
  */
 public class DetailsListAdapter extends BaseAdapter implements StaticHelpers {
 

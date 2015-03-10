@@ -6,17 +6,12 @@ import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  CustomActionBarActivity
- * Defined in -> cl.shazkho.utils.keitaijisho.objects.custom
- * ***************************************
  * This module represents a customized representation of the 'ActionBarActivity' class.
  * This class only adds common behaviour to the ActionBarActivity (callback related).
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 08, 2015
+ * @version 0.7
+ * @since 2015-03-08
  */
 public class CustomActionBarActivity extends ActionBarActivity implements StaticHelpers {
 

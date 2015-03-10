@@ -6,7 +6,7 @@ import java.util.HashMap;
  * *************************************
  * PROJECT: KEITAI JISHO
  * MODULE:  JapaneseWritingHelper
- * Defined in -> cl.shazkho.utils.keitaijisho.tools
+ * Package: cl.shazkho.utils.keitaijisho.tools
  * ***************************************
  * Helper class to hel manage japanese writing systems.
  * ***************************************

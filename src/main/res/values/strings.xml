@@ -47,6 +47,9 @@
     <string name="results_menu_reload">Force data reload</string>
     <string name="result_tts_error1">TTS ERROR: Language is not supported</string>
     <string name="result_tts_error2">TTS ERROR: Couldn\'t start TTS service</string>
+    <string name="activity_results_hint_icon_description">Hint</string>
+    <string name="activity_results_hint_text">TAP A KANJI FOR DETAILS</string>
+    <string name="activity_results_hint_button" translatable="false">OK!</string>
 
 
     <!-- Kanji Details Activity -->
@@ -71,9 +74,9 @@
     <string name="title_activity_about">About Keitai Jisho</string>
     <string name="about_title_text" translatable="false">KEITAI JISHO</string>
     <string name="about_details_versionRow_label">Version:</string>
-    <string name="about_details_versionRow_value" translatable="false">0.7 (396)</string>
+    <string name="about_details_versionRow_value" translatable="false">0.7 (410)</string>
     <string name="about_details_dateRow_label">Build date:</string>
-    <string name="about_details_dateRow_value" translatable="false">2015–03–15</string>
+    <string name="about_details_dateRow_value" translatable="false">2015–03–09</string>
     <string name="about_details_authorRow_label">Author:</string>
     <string name="about_details_authorRow_value" translatable="false">George Shazkho</string>
     <string name="about_details_contactRow_label">Contact:</string>
@@ -116,7 +119,7 @@
         </html>]]>
     </string>
     <string name="about_details_licenseRow_label">License</string>
-    <string name="about_details_licenseRow_value">Pending</string>
+    <string name="about_details_licenseRow_value">Apache License, Version 2.0</string>
 
 
     <!-- Whatsnew -->

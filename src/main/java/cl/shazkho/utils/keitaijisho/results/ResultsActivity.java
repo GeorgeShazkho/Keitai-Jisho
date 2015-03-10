@@ -1,6 +1,7 @@
 package cl.shazkho.utils.keitaijisho.results;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v4.app.ActivityCompat;
@@ -12,6 +13,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -30,18 +33,18 @@ import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
 
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  Results Activity
- * Defined in -> cl.shazkho.utils.keitaijisho.search
- * ***************************************
  * Activity that shows the results of a single query to the database.
- * ***************************************
+ *
+ * <p>Keitai Jisho Activities works using a simple abstraction
+ * of the Activity Class, more precisely, it uses the
+ * ActionBarActivity Class to have compatibility with
+ * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.7 - March 06, 2015
+ * @version 0.7
+ * @since 2015-03-06
  */
-public class ResultsActivity extends CustomActionBarActivity implements TextToSpeech.OnInitListener, StaticHelpers {
+public class ResultsActivity extends CustomActionBarActivity implements TextToSpeech.OnInitListener, StaticHelpers, View.OnClickListener {
 
 
     // INSTANCE VARIABLES
@@ -94,6 +97,19 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
             Log.e("Search List Adapter", "Error loading JSON String into JSONArray Object.");
             Log.e("Search List Adapter", e.toString());
             e.printStackTrace();
+        }
+
+        // Hint Spawn
+
+        SharedPreferences preferences = getSharedPreferences("main_preferences", 0);
+        boolean is_kanji_hint_disposed = preferences.getBoolean("is_kanji_hint_disposed", false);
+        if ( !is_kanji_hint_disposed ) {
+            RelativeLayout hint = (RelativeLayout) findViewById(R.id.results_hint);
+            RelativeLayout hintBackground = (RelativeLayout) findViewById(R.id.results_hint_background);
+            hint.setVisibility(View.VISIBLE);
+            hintBackground.setVisibility(View.VISIBLE);
+            Button hintButton = (Button) findViewById(R.id.result_hint_button);
+            hintButton.setOnClickListener(this);
         }
 
 
@@ -155,9 +171,9 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
 
     @Override
     public void requestCallback(ResponseObject response) {
-        mResponseObject = response;
-        if (response.getmDatabase().equals("search")) {
 
+        if (response.getmDatabase().equals("search")) {
+            mResponseObject = response;
             String JSON = mResponseObject.getmJsonResult();
             try {
                 JSONObject jsonObj = new JSONObject( JSON );
@@ -182,7 +198,6 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
         } else if (response.getmDatabase().equals("details")) {
             Intent intent = new Intent( getApplicationContext(), ResultDetailActivity.class );
             intent.putExtra("result", response);
-            intent.putExtra("origin", mResponseObject);
             ActivityOptionsCompat options = ActivityOptionsCompat.makeCustomAnimation(
                     getApplicationContext(),
                     R.anim.abc_slide_in_top,
@@ -226,4 +241,15 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
 		*/
 	}
 
+    @Override
+    public void onClick(View v) {
+        SharedPreferences preferences = getSharedPreferences("main_preferences", 0);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("is_kanji_hint_disposed", true );
+        editor.apply();
+        RelativeLayout hint = (RelativeLayout) findViewById(R.id.results_hint);
+        RelativeLayout hintBackground = (RelativeLayout) findViewById(R.id.results_hint_background);
+        hint.setVisibility(View.GONE);
+        hintBackground.setVisibility(View.GONE);
+    }
 }

@@ -26,17 +26,13 @@ import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
 import cl.shazkho.utils.keitaijisho.tools.JapaneseWritingHelper;
 import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
+
 /**
- * *************************************
- * PROJECT: KEITAI JISHO
- * MODULE:  ResultListAdapter
- * Defined in -> cl.shazkho.utils.keitaijisho.results
- * ***************************************
  * Handles result list inflation.
- * ***************************************
  *
  * @author George Shazkho
- * @version 0.7 - March 08, 2015
+ * @version 0.7
+ * @since 2015-03-08
  */
 public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
 
