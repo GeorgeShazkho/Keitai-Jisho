@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 	// DATABASE SETUP
 	static private final String DATABASE_NAME = "userSettings";
-	static private final int DATABASE_VERSION = 18;
+	static private final int DATABASE_VERSION = 19;
 
 	// TABLE NAMES
 	static private final String TABLE_SEARCH = "search";

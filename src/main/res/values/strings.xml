@@ -74,9 +74,9 @@
     <string name="title_activity_about">About Keitai Jisho</string>
     <string name="about_title_text" translatable="false">KEITAI JISHO</string>
     <string name="about_details_versionRow_label">Version:</string>
-    <string name="about_details_versionRow_value" translatable="false">0.7.1 (415)</string>
+    <string name="about_details_versionRow_value" translatable="false">0.7.2 (416)</string>
     <string name="about_details_dateRow_label">Build date:</string>
-    <string name="about_details_dateRow_value" translatable="false">2015–03–10</string>
+    <string name="about_details_dateRow_value" translatable="false">2015–03–12</string>
     <string name="about_details_authorRow_label">Author:</string>
     <string name="about_details_authorRow_value" translatable="false">George Shazkho</string>
     <string name="about_details_contactRow_label">Contact:</string>
@@ -136,6 +136,10 @@
             <body>
                 <b>DEVELOPER\'S NOTE:</b> You may not notice it, but we changed A LOT since 0.6!. Better performance, 15\%% to 2\%% decreased error spawn on web requests, better performance, lighter, faster… and still FREE (now and for ever!).<br/>
                 <br/>
+                <b>v0.7.2 HOTFIX (03/12/2015):</b><br/>
+                <ul>
+                    <li>Kanji details bug on request solved.</li>
+                </ul>
                 <b>v0.7.1 CHANGES (03/10/2015):</b><br/>
                 <ul>
                     <li>Corrected bug in romaji translation, hint spawn (result list)</li>

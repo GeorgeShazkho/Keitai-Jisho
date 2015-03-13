@@ -41,7 +41,6 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
 
     private CustomActionBarActivity mParent;
     private JSONArray mHome;
-    private String mAux;
     private boolean isJsonLoaded;
 
 
@@ -119,12 +118,11 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
             JSONArray kanjiArray = result.getJSONArray("kanji");
             holder.kanji_row.removeAllViews();
             for ( int i = 0; i < kanjiArray.length(); ++i ) {
-                mAux = kanjiArray.getString(i);
-                View kanjiView = createTextView(mAux, KANJI);
+                View kanjiView = createTextView(kanjiArray.getString(i), KANJI);
                 kanjiView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        handleDetailRequest( mAux );
+                        handleDetailRequest( ((TextView) v).getText().toString() );
                     }
                 });
                 holder.kanji_row.addView( kanjiView );

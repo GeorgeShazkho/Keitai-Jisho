@@ -86,6 +86,10 @@
             <body>
                 <b>NOTA DEL DESARROLLADOR:</b> Puede que no lo notes, pero cambiamos MUCHO desde la versión 0.6!. Mejor desempeño, disminución de 15\%% a 2\%% en la aparición errores en peticiones web, mas liviana, rápida y… aun GRÁTIS (ahora y por siempre!).<br/>
                 <br/>
+                <b>REVISIÓN v0.7.2 (03/12/2015):</b><br/>
+                <ul>
+                    <li>Solucionado bug en la consulta de detalles para un kanji.</li>
+                </ul>
                 <b>CAMBIOS v0.7.1 (03/10/2015):</b><br/>
                 <ul>
                     <li>Correjido bug en traducción a Romaji y aparición del hint (en la lista de resultados)</li>
