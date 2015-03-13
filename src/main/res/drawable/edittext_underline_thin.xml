@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+KEITAI JISHO PROJECT
+Drawable Resource File: edittext_underline_thin
+Description:            Bottom thin responsive divider for EditText on material design.
+
+@version    1.0 alpha 150313
+@author     George Shazkho
+@since      March 09, 2015
+-->
+
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/divider_underline_accent_thin"
+        /> <!-- pressed -->
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/divider_underline_accent_thin"
+        /> <!-- focused -->
+    <item
+        android:drawable="@drawable/divider_underline"
+        /> <!-- default -->
+</selector>

@@ -5,23 +5,35 @@
     KEITAI JISHO PROJECT
     Resource File: Colors
 
-    @version    0.7
+    @version    1.0 alpha 150313
     @author     George Shazkho
-    @date       March 09, 2015
+    @since      March 09, 2015
     -->
 
 
     <!-- Application Base Theme Colors -->
 
-    <color name="AppTheme.primaryColor">#B71C1C</color>
-    <color name="AppTheme.primaryColor_dark">#ff8c1c1c</color>
-    <color name="AppTheme.accentColor">#FF5722</color>
-    <color name="AppTheme.text_base">#DD000000</color>
-    <color name="AppTheme.text_secondary_icons">#89000000</color>
+    <color name="AppTheme.primaryColor_light">#C5CAE9</color>
+    <color name="AppTheme.primaryColor">#3F51B5</color>
+    <color name="AppTheme.primaryColor_dark">#303F9F</color>
+    <color name="AppTheme.accentColor_light">#FFE57F</color>
+    <color name="AppTheme.accentColor">#FFD740</color>
+    <color name="AppTheme.accentColor_dark">#FFAB00</color>
     <color name="AppTheme.primaryColor_dark_light">#258b1c1c</color>
-    <color name="theme_textColor_inverse">#FFFFFF</color>
+    <color name="AppTheme.background_light">#fff9f9f9</color>
+
+
+    <!-- Application Text Colors -->
+
+    <color name="AppTheme.text_base">#DE000000</color>
+    <color name="AppTheme.text_secondary_icons">#8A000000</color>
     <color name="AppTheme.text_disabled_hint">#42000000</color>
-    <color name="AppTheme.dividers">#FFC3C3C3</color>
+    <color name="AppTheme.dividers">#1F000000</color>
+    <color name="theme_textColor_inverse">#FFFFFF</color>
+
+
+    <!-- Other global colors -->
+
     <color name="toolbar_shadow">#ff9d9d9d</color>
     <color name="transparent">#00000000</color>
 

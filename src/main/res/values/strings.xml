@@ -6,24 +6,24 @@
     Resource File: Strings (base)
     NOTE: Translations will not be commented
 
-    @version    0.7
+    @version    1.0 alpha 150313
     @author     George Shazkho
-    @date       March 09, 2015
+    @since       March 09, 2015
     -->
 
     <!-- Main strings -->
 
     <string name="app_name" translatable="false">Keitai Jisho</string>
-    <string name="search_title" translatable="false">Keitai Jisho</string>
     <string name="dummyText_short" translatable="false">%D%</string>
     <string name="dummyText_medium" translatable="false">%DUMMY%</string>
     <string name="dummyText_large" translatable="false">$THIS_IS_A_REALLY_LONG_DUMMY%</string>
     <string name="search_async_searching">Searching…</string>
-    <string name="version" translatable="false">0.7.1</string>
+    <string name="version" translatable="false">1.0 alpha</string>
 
 
     <!-- Search Activity -->
 
+    <string name="search_title" translatable="false">Search</string>
     <string name="action_settings">Settings</string>
     <string name="search_searchBox_hint">Search here</string>
     <string name="search_searchBox_title_text">Kanji, kana and romaji are allowed</string>

@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -24,7 +24,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ import cl.shazkho.utils.keitaijisho.tools.JapaneseWritingHelper;
  * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.7
+ * @version 1.0 alpha 150313
  * @since 2015-03-08
  */
 public class SearchActivity extends CustomActionBarActivity	implements View.OnClickListener, View.OnFocusChangeListener, TextWatcher, TextView.OnEditorActionListener, Animation.AnimationListener {
@@ -56,9 +55,6 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
 	// INSTANCE VARIABLES
 
 	private EditText mSearchField;
-	private Switch mInEnglish;
-	private TextView mSearchTitle;
-    private Button mSearchButton;
     private View mImportPanel;
 
 
@@ -72,33 +68,26 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
 		setContentView(R.layout.activity_search);
 
 		// Initialize elements
-		Spinner mDicSelect = (Spinner) findViewById(R.id.search_dicSelect_spinner);
-		mSearchField = (EditText) findViewById(R.id.search_searchBox_field);
-		mSearchButton = (Button) findViewById(R.id.search_buttons_search);
-		mInEnglish = (Switch) findViewById(R.id.search_config_english);
-		Button mClearButton = (Button) findViewById(R.id.CLR);
+		Spinner mDicSelect = (Spinner) findViewById(R.id.search_dict_spinner);
+		mSearchField = (EditText) findViewById(R.id.search_query_field);
+		Spinner mSearchMode = (Spinner) findViewById(R.id.search_english_spinner);
 		ArrayList<String> dictionaries = new ArrayList<>();
-		mSearchTitle = (TextView) findViewById(R.id.search_searchBox_title);
+        ArrayList<String> search_modes = new ArrayList<>();
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.search_toolbar);
+        setSupportActionBar(mToolbar);
 
 
 		// Configure elements
 		dictionaries.add(getResources().getString(R.string.search_general_dict) + " (Edict)");
+        search_modes.add("日本語");
+        search_modes.add("ENGLISH");
 		this.spinnerInflate(mDicSelect, dictionaries);
-		Typeface typeFace=Typeface.createFromAsset(getAssets(),"fonts/roboto/medium.ttf");
-		mSearchButton.setTypeface(typeFace);
-        mSearchButton.setEnabled(false);
-		mClearButton.setTypeface(typeFace);
+        this.spinnerInflate(mSearchMode, search_modes);
 
         mSearchField.setOnEditorActionListener(this);
-		mSearchButton.setOnClickListener(this);
 		mSearchField.setOnFocusChangeListener(this);
         mSearchField.addTextChangedListener(this);
-		mClearButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				mSearchField.setText("");
-			}
-		});
+
 
         // Whatsnew section spawn
         SharedPreferences preferences = getSharedPreferences("main_preferences", 0);
@@ -170,16 +159,6 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
             return;
         }
 
-        if ( mInEnglish.isChecked() ) {
-            if ( !writing.equals("kana") ) {
-                //mSearchField.setError("English search may only contain roman characters.");      /* Force english with non roman characters */
-                mSearchField.setError(getResources().getString(R.string.search_error_english_kana));      /* Force english with non roman characters */
-                return;
-            } else {
-                writing = "gloss";
-            }
-        }
-
         ResponseObject responseObject = new ResponseObject("search", input_query + "+" + writing);
         DatabaseManager manager = new DatabaseManager(this);
         manager.query(responseObject, false);
@@ -206,9 +185,6 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
                 mImportPanel.startAnimation(fadeOut);
 
                 break;
-            case R.id.search_buttons_search:
-                handleRequest();
-                break;
             default:
                 break;
         }
@@ -219,11 +195,7 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
 
 	@Override
 	public void onFocusChange(View v, boolean hasFocus) {
-		if(hasFocus) {
-			mSearchTitle.setTextColor(getResources().getColor(R.color.AppTheme_primaryColor));
-		} else {
-			mSearchTitle.setTextColor(getResources().getColor(R.color.AppTheme_text_base));
-		}
+
 	}
 
 
@@ -236,7 +208,7 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        mSearchButton.setEnabled(!mSearchField.getText().toString().equals(""));
+
     }
 
     @Override
