@@ -132,5 +132,12 @@
     <string name="orientation">port</string>
     <string name="activity_results_hint_icon_description">Ayuda</string>
     <string name="activity_results_hint_text">TOCA UN KANJI PARA VER MAS INFORMACIÓN</string>
+    <string name="pref_display_settings_header">Apariencia</string>
+    <string name="pref_information_header">Información</string>
+    <string name="pref_title_about">Acerca de Keitai Jisho</string>
+    <string name="pref_title_report">Reportar bug</string>
+    <string name="pref_title_select_theme">Tema visual</string>
+    <string name="title_activity_bug_report">Reporte de error</string>
+    <string name="title_activity_settings">Configuración</string>
 
 </resources>
