@@ -1,6 +1,6 @@
 <!--
 KEITAI JISHO PROJECT
-Layout Resource File:   activity_search
+Layout Resource File:   activity_search LANDSCAPE
 
 @version    1.0 alpha 150316
 @author     George Shazkho
@@ -23,7 +23,18 @@ Layout Resource File:   activity_search
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignBottom="@+id/search_toolbar_extension"
-        android:background="@drawable/fondo_2" />
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layerType="none" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_toolbar_background_image"
+            android:src="@drawable/fondo_2"
+            android:scaleType="centerCrop"
+            android:scrollY="-50dp" />
+    </RelativeLayout>
 
     <LinearLayout
         android:focusable="true" android:focusableInTouchMode="true"
@@ -45,7 +56,7 @@ Layout Resource File:   activity_search
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="180dp"
+        android:layout_height="40dp"
         android:id="@+id/search_toolbar_extension"
         android:background="@color/transparent"
         android:layout_below="@+id/search_toolbar" >
@@ -56,11 +67,11 @@ Layout Resource File:   activity_search
             android:text="Keitai Jisho"
             android:id="@+id/textView"
             android:layout_marginLeft="72dp"
-            android:layout_marginBottom="24dp"
-            android:layout_alignParentBottom="true"
+            android:layout_alignParentBottom="false"
             android:layout_alignParentLeft="true"
-            android:textSize="36dp"
-            android:textColor="#ffffffff" />
+            android:textSize="28sp"
+            android:textColor="#ffffffff"
+            android:layout_alignParentTop="true" />
 
     </RelativeLayout>
 
@@ -101,7 +112,7 @@ Layout Resource File:   activity_search
 
                 <Spinner
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
+                    android:layout_height="56dp"
                     android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
                     android:id="@+id/search_dict_spinner"
                     android:spinnerMode="dropdown"
@@ -113,7 +124,7 @@ Layout Resource File:   activity_search
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="56dp"
             android:id="@+id/search_query"
             android:gravity="center_vertical"
             android:layout_below="@+id/search_dict">
@@ -147,7 +158,7 @@ Layout Resource File:   activity_search
                 android:imeActionId="10"
                 style="@style/Base.Widget.AppCompat.EditText"
                 android:gravity="bottom"
-                android:textSize="34sp"
+                android:textSize="24dp"
                 android:textColorHint="#27000000"
                 android:textColor="@color/AppTheme.text_base"
                 android:background="@drawable/edittext_underline"
@@ -159,7 +170,7 @@ Layout Resource File:   activity_search
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="56dp"
             android:id="@+id/search_english"
             android:layout_below="@+id/search_query"
             android:gravity="bottom">
@@ -180,7 +191,7 @@ Layout Resource File:   activity_search
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:text="Searching in :"
                 android:id="@+id/search_english_label"
                 android:layout_alignParentLeft="false"
@@ -189,17 +200,16 @@ Layout Resource File:   activity_search
                 android:paddingBottom="10dp"
                 android:paddingRight="16dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="36dp"
                 android:textColor="@color/AppTheme.text_secondary_icons"
                 android:layout_toRightOf="@+id/search_english_icon" />
 
             <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="56dp"
                 android:id="@+id/search_english_spinner_wrapper"
-                android:layout_marginTop="32dp"
                 android:layout_toRightOf="@+id/search_english_label"
-                android:background="@drawable/divider_underline">
+                android:background="@drawable/divider_underline"
+                android:layout_alignParentBottom="true">
 
                 <Spinner
                     android:layout_width="match_parent"

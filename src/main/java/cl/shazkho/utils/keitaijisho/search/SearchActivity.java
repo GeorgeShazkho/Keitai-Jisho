@@ -32,7 +32,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import cl.shazkho.utils.keitaijisho.R;
-import cl.shazkho.utils.keitaijisho.SettingsActivity;
+import cl.shazkho.utils.keitaijisho.settings.SettingsActivity;
 import cl.shazkho.utils.keitaijisho.database.DatabaseManager;
 import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
@@ -86,7 +86,7 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
 		// Configure elements
 		dictionaries.add(getResources().getString(R.string.search_general_dict) + " (Edict)");
         search_modes.add("日本語");
-        search_modes.add("ENGLISH");
+        search_modes.add("English");
 		this.spinnerInflate(mDicSelect, dictionaries);
         this.spinnerInflate(mSearchMode, search_modes);
 

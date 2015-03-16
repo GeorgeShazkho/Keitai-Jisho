@@ -11,4 +11,5 @@
     android:background="?attr/colorPrimary"
     app:navigationIcon="?attr/homeAsUpIndicator"
     app:title="@string/action_settings"
+    android:layout_marginBottom="16dp"
     />

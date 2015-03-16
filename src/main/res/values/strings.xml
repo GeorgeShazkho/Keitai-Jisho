@@ -18,7 +18,7 @@
     <string name="dummyText_medium" translatable="false">%DUMMY%</string>
     <string name="dummyText_large" translatable="false">$THIS_IS_A_REALLY_LONG_DUMMY%</string>
     <string name="search_async_searching">Searching…</string>
-    <string name="version" translatable="false">1.0 alpha</string>
+    <string name="version" translatable="false">1.0 alpha 150316</string>
 
 
     <!-- Search Activity -->
@@ -186,5 +186,6 @@
     <string name="no_result_sign_department">Disappointed people service.</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_bug_report">Bug report</string>
 
 </resources>

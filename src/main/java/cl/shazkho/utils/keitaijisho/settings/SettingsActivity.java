@@ -1,4 +1,4 @@
-package cl.shazkho.utils.keitaijisho;
+package cl.shazkho.utils.keitaijisho.settings;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,7 +22,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import cl.shazkho.utils.keitaijisho.R;
 import cl.shazkho.utils.keitaijisho.about.AboutActivity;
+import cl.shazkho.utils.keitaijisho.report.BugReportActivity;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -50,14 +52,25 @@ public class SettingsActivity extends PreferenceActivity implements SharedPrefer
         PreferenceManager.setDefaultValues(SettingsActivity.this, R.xml.pref_general, false);
         initSummary(getPreferenceScreen());
 
-        Preference pref = findPreference("pref_key_about");
-        pref.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+        Preference reportPreference = findPreference("pref_key_report");
+        reportPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 
             @Override
             public boolean onPreferenceClick(Preference preference) {
 
-                Intent testIntent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(testIntent);
+                Intent reportIntent = new Intent(getApplicationContext(), BugReportActivity.class);
+                startActivity(reportIntent);
+                return true;
+            }
+        });
+        Preference aboutPreference = findPreference("pref_key_about");
+        aboutPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+
+                Intent aboutIntent = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(aboutIntent);
                 return true;
             }
         });

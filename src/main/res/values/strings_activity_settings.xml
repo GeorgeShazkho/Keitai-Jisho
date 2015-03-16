@@ -31,6 +31,9 @@
     <!-- Information -->
     <string name="pref_information_header">Information</string>
 
+
+    <!-- Bug Report String -->
+    <string name="pref_title_report">Report a bug</string>
     <!-- About String -->
     <string name="pref_title_about">About Keitai Jisho</string>
 

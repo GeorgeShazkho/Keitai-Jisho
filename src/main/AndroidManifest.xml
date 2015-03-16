@@ -34,12 +34,17 @@
             android:parentActivityName=".resultdetails.ResultDetailActivity" >
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name=".settings.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".search.SearchActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cl.shazkho.utils.keitaijisho.search.SearchActivity" />
+        </activity>
+        <activity
+            android:name=".report.BugReportActivity"
+            android:label="@string/title_activity_bug_report"
+            android:parentActivityName=".settings.SettingsActivity" >
         </activity>
     </application>
 
