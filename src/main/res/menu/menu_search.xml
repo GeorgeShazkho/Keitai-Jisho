@@ -2,17 +2,22 @@
 KEITAI JISHO PROJECT
 Menu File: menu_research
 
-@version    0.7
+@version    1.0 alpha 150314
 @author     George Shazkho
-@date       March 09, 2015
+@since      March 09, 2015
 -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:app="http://schemas.android.com/apk/res-auto"
-      xmlns:tools="http://schemas.android.com/tools"
-      tools:context=".SearchActivity">
-    <item android:id="@+id/action_settings"
-          android:title="@string/action_settings"
-          android:orderInCategory="100"
-          app:showAsAction="never"/>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cl.shazkho.utils.keitaijisho.search.SearchActivity">
+
+    <item
+        android:id="@+id/search_menu_settings"
+        android:title="Settings"
+        android:orderInCategory="1"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_settings"/>
+
 </menu>

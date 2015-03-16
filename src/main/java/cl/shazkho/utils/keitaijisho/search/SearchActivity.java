@@ -12,6 +12,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewStub;
 import android.view.animation.AccelerateInterpolator;
@@ -23,12 +25,14 @@ import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 import cl.shazkho.utils.keitaijisho.R;
+import cl.shazkho.utils.keitaijisho.SettingsActivity;
 import cl.shazkho.utils.keitaijisho.database.DatabaseManager;
 import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
@@ -46,7 +50,7 @@ import cl.shazkho.utils.keitaijisho.tools.JapaneseWritingHelper;
  * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 1.0 alpha 150313
+ * @version 1.0 alpha 150314
  * @since 2015-03-08
  */
 public class SearchActivity extends CustomActionBarActivity	implements View.OnClickListener, View.OnFocusChangeListener, TextWatcher, TextView.OnEditorActionListener, Animation.AnimationListener {
@@ -75,6 +79,8 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
         ArrayList<String> search_modes = new ArrayList<>();
         Toolbar mToolbar = (Toolbar) findViewById(R.id.search_toolbar);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("");
+        FrameLayout search_fab = (FrameLayout) findViewById(R.id.search_fab);
 
 
 		// Configure elements
@@ -87,6 +93,7 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
         mSearchField.setOnEditorActionListener(this);
 		mSearchField.setOnFocusChangeListener(this);
         mSearchField.addTextChangedListener(this);
+        search_fab.setOnClickListener(this);
 
 
         // Whatsnew section spawn
@@ -107,6 +114,26 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
         }
 
 	}
+
+    @Override
+    public boolean onCreateOptionsMenu(final Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
+        int id = item.getItemId();
+        switch(id){
+            case R.id.search_menu_settings:
+                Intent intent = new Intent(SearchActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 
 	// CLASS SPECIFIC METHODS
@@ -183,7 +210,9 @@ public class SearchActivity extends CustomActionBarActivity	implements View.OnCl
                 fadeOut.setDuration(300);
                 fadeOut.setAnimationListener(this);
                 mImportPanel.startAnimation(fadeOut);
-
+                break;
+            case R.id.search_fab:
+                handleRequest();
                 break;
             default:
                 break;

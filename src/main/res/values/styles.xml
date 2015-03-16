@@ -31,25 +31,11 @@
 
 
     <style name="AppTheme.SpinnerStyle" parent="Base.Widget.AppCompat.Spinner">
-        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
         <item name="android:layout_marginRight">16dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">56dp</item>
         <item name="android:textColor">@color/AppTheme.text_base</item>
-    </style>
-
-    <style name="AppTheme.SpinnerStyle.Bold" parent="Base.Widget.AppCompat.Spinner">
-        <item name="android:spinnerDropDownItemStyle">@style/spinnerItemStyle</item>
-        <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
-        <item name="android:layout_marginLeft">16dp</item>
-        <item name="android:layout_marginRight">16dp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">56dp</item>
-        <item name="android:textColor">@color/AppTheme.text_base</item>
-    </style>
-
-    <style name="spinnerItemStyle">
-        <item name="android:textSize">30sp</item>
     </style>
 
 

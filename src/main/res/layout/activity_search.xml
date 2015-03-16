@@ -2,7 +2,7 @@
 KEITAI JISHO PROJECT
 Layout Resource File:   activity_search
 
-@version    1.0 alpha 150313
+@version    1.0 alpha 150316
 @author     George Shazkho
 @since       March 09, 2015
 -->
@@ -14,7 +14,16 @@ Layout Resource File:   activity_search
     android:layout_height="match_parent"
     tools:context=".SearchActivity"
     android:focusable="true"
-    android:background="#fff9f9f9">
+    android:background="@color/AppTheme.background_light_deep">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/search_toolbar_background"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignBottom="@+id/search_toolbar_extension"
+        android:background="@drawable/fondo_2" />
 
     <LinearLayout
         android:focusable="true" android:focusableInTouchMode="true"
@@ -27,7 +36,7 @@ Layout Resource File:   activity_search
         android:layout_height="56dp"
         android:layout_width="fill_parent"
         android:minHeight="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="@color/transparent"
         app:theme="@style/AppTheme.ActionBarStyle"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:layout_alignParentTop="true"
@@ -36,103 +45,172 @@ Layout Resource File:   activity_search
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="4dp"
-        android:id="@+id/search_shadow"
-        android:background="@drawable/shadow"
-        android:layout_marginBottom="4dp"
-        android:layout_below="@+id/search_toolbar">
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:id="@+id/search_dict"
-        android:layout_below="@+id/search_toolbar"
-        android:background="@drawable/divider_underline">
-
-        <Spinner
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
-            android:id="@+id/search_dict_spinner"
-            android:spinnerMode="dropdown"
-            style="@style/AppTheme.SpinnerStyle"
-            android:paddingEnd="16dp"
-            android:paddingStart="16dp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:id="@+id/search_query"
-        android:gravity="center_vertical"
-        android:layout_below="@+id/search_dict"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/search_query_field"
-            android:inputType="text"
-            android:focusableInTouchMode="true"
-            android:focusable="true"
-            android:nextFocusLeft="@id/search_query_field"
-            android:nextFocusUp="@id/search_query_field"
-            android:hint="@string/search_searchBox_hint"
-            android:imeOptions="actionSearch"
-            android:imeActionId="10"
-            style="@style/Base.Widget.AppCompat.EditText"
-            android:gravity="bottom"
-            android:textSize="34sp"
-            android:textColorHint="@color/AppTheme.text_disabled_hint"
-            android:textColor="@color/AppTheme.text_base"
-            android:background="@drawable/edittext_underline"
-            android:paddingBottom="8dp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="72dp"
-        android:id="@+id/search_english"
-        android:layout_below="@+id/search_query"
-        android:gravity="bottom">
+        android:layout_height="180dp"
+        android:id="@+id/search_toolbar_extension"
+        android:background="@color/transparent"
+        android:layout_below="@+id/search_toolbar" >
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Searching in :"
-            android:id="@+id/search_english_label"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="56dp"
-            android:gravity="center_vertical|right"
-            style="@style/Base.TextAppearance.AppCompat.Title"
-            android:paddingBottom="10dp"
-            android:paddingRight="16dp"
+            android:layout_height="wrap_content"
+            android:text="Keitai Jisho"
+            android:id="@+id/textView"
+            android:layout_marginLeft="72dp"
+            android:layout_marginBottom="24dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="36dp"
-            android:textColor="@color/AppTheme.text_secondary_icons" />
+            android:layout_alignParentLeft="true"
+            android:textSize="36dp"
+            android:textColor="#ffffffff" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/search_form"
+        android:layout_below="@+id/search_toolbar_extension"
+        android:background="@color/AppTheme.background_light"
+        android:paddingBottom="16dp">
 
         <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/search_english_spinner_wrapper"
-            android:layout_marginTop="32dp"
-            android:layout_toRightOf="@+id/search_english_label"
-            android:layout_marginRight="16dp"
-            android:background="@drawable/divider_underline">
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:id="@+id/search_dict"
+            android:layout_marginTop="28dp"
+            android:layout_alignParentTop="true">
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/search_english_spinner"
-                android:layout_alignParentRight="true"
-                style="@style/AppTheme.SpinnerStyle"
-                android:layout_alignParentBottom="true" />
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/search_dict_icon"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_book_inverse"
+                android:layout_marginRight="32dp"
+                android:alpha="0.6"
+                android:background="@color/AppTheme.accentColor"
+                android:scaleType="centerCrop"
+                android:padding="-3dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/search_dict_spinnet_wrapper"
+                android:layout_toRightOf="@+id/search_dict_icon"
+                android:background="@drawable/divider_underline">
+
+                <Spinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
+                    android:id="@+id/search_dict_spinner"
+                    android:spinnerMode="dropdown"
+                    style="@style/AppTheme.SpinnerStyle"
+                    android:paddingRight="16dp" />
+            </RelativeLayout>
+
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:id="@+id/search_query"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/search_dict">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/search_query_icon"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/ic_input_inverse"
+                android:layout_marginRight="32dp"
+                android:alpha="0.6"
+                android:background="@color/AppTheme.accentColor"
+                android:scaleType="centerCrop"
+                android:padding="-3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="18dp"
+                android:contentDescription="Enter here your search query" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/search_query_field"
+                android:inputType="text"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:nextFocusLeft="@id/search_query_field"
+                android:nextFocusUp="@id/search_query_field"
+                android:hint="@string/search_searchBox_hint"
+                android:imeOptions="actionSearch"
+                android:imeActionId="10"
+                style="@style/Base.Widget.AppCompat.EditText"
+                android:gravity="bottom"
+                android:textSize="34sp"
+                android:textColorHint="#27000000"
+                android:textColor="@color/AppTheme.text_base"
+                android:background="@drawable/edittext_underline"
+                android:paddingBottom="8dp"
+                android:paddingRight="16dp"
+                android:layout_toRightOf="@+id/search_query_icon" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:id="@+id/search_english"
+            android:layout_below="@+id/search_query"
+            android:gravity="bottom">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/search_english_icon"
+                android:layout_marginLeft="16dp"
+                android:src="@mipmap/ic_public_inverse"
+                android:layout_marginRight="32dp"
+                android:alpha="0.6"
+                android:background="@color/AppTheme.accentColor"
+                android:scaleType="centerCrop"
+                android:padding="-3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Searching in :"
+                android:id="@+id/search_english_label"
+                android:layout_alignParentLeft="false"
+                android:gravity="center_vertical|right"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:paddingBottom="10dp"
+                android:paddingRight="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="36dp"
+                android:textColor="@color/AppTheme.text_secondary_icons"
+                android:layout_toRightOf="@+id/search_english_icon" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/search_english_spinner_wrapper"
+                android:layout_marginTop="32dp"
+                android:layout_toRightOf="@+id/search_english_label"
+                android:background="@drawable/divider_underline">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/search_english_spinner"
+                    android:layout_alignParentRight="true"
+                    style="@style/AppTheme.SpinnerStyle"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+        </RelativeLayout>
     </RelativeLayout>
 
     <ViewStub
@@ -141,5 +219,42 @@ Layout Resource File:   activity_search
         android:id="@+id/search_whatsnew"
         android:inflatedId="@+id/search_whatsnew_visible"
         android:layout="@layout/whatsnew" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:id="@+id/search_shadow"
+        android:background="@drawable/shadow"
+        android:layout_marginBottom="4dp"
+        android:layout_below="@+id/search_toolbar_extension">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="8dp"
+        android:id="@+id/search_form_shadow"
+        android:background="@drawable/shadow"
+        android:layout_below="@+id/search_form"
+        android:alpha="0.15">
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/search_fab"
+        android:background="@drawable/floating_action_button"
+        android:layout_alignBottom="@+id/search_toolbar_extension"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="-35dp"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/search_fab_icon"
+            android:background="@mipmap/ic_search_fab"
+            android:alpha="0.9"/>
+    </FrameLayout>
 
 </RelativeLayout>

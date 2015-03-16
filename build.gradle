@@ -24,8 +24,8 @@ android {
         applicationId "cl.shazkho.utils.keitaijisho"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 431
-        versionName "1.0 alpha 150313"
+        versionCode 482
+        versionName "1.0 alpha 150316"
         signingConfig signingConfigs.keitaijishoSignature
     }
     buildTypes {
@@ -50,6 +50,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.0.0'
     compile files('libs/svgAndroid2-3Jan2014.jar')
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.android.support:support-v4:22.0.0'
 }

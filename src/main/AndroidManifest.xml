@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".search.SearchActivity"
-            android:label="@string/search_title" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,17 +21,25 @@
         <activity
             android:name=".results.ResultsActivity"
             android:label="@string/title_activity_results"
-            android:parentActivityName="cl.shazkho.utils.keitaijisho.search.SearchActivity">
+            android:parentActivityName=".search.SearchActivity" >
         </activity>
         <activity
             android:name=".resultdetails.ResultDetailActivity"
             android:label="@string/title_activity_result_detail"
-            android:parentActivityName=".results.ResultsActivity">
+            android:parentActivityName=".results.ResultsActivity" >
         </activity>
         <activity
             android:name=".about.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName=".resultdetails.ResultDetailActivity">
+            android:parentActivityName=".resultdetails.ResultDetailActivity" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".search.SearchActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cl.shazkho.utils.keitaijisho.search.SearchActivity" />
         </activity>
     </application>
 

@@ -1,0 +1,38 @@
+<resources>
+
+    <!--
+    KEITAI JISHO PROJECT
+    Resource File: Strings (Settings Activity)
+    NOTE: Translations will not be commented
+
+    @version    1.0 alpha 150315
+    @author     George Shazkho
+    @since      March 15, 2015
+    -->
+
+
+    <!-- Main strings -->
+    <string name="title_activity_settings">Settings</string>
+    
+    <!-- Visual configurations -->
+    <string name="pref_display_settings_header">Display settings</string>
+
+    <!-- Theme selection Strings-->
+    <string name="pref_title_select_theme">Application theme</string>
+    <string-array name="pref_theme_titles">
+        <item>Original theme (Red Jisho)</item>
+        <item>Material Fuji-san</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>base</item>
+        <item>fuji</item>
+    </string-array>
+
+    <!-- Information -->
+    <string name="pref_information_header">Information</string>
+
+    <!-- About String -->
+    <string name="pref_title_about">About Keitai Jisho</string>
+
+
+</resources>
