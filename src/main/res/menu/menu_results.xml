@@ -21,10 +21,10 @@ Menu File: menu_results
         android:icon="@drawable/ic_force_reload"/>
 
     <item
-        android:id="@+id/results_menu_about"
-        android:title="@string/results_menu_about"
+        android:id="@+id/results_menu_settings"
+        android:title="@string/title_activity_settings"
         android:orderInCategory="2"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_about"/>
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_settings"/>
 
 </menu>

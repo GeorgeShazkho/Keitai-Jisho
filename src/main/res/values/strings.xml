@@ -71,8 +71,8 @@
 
     <!-- About Activity -->
 
-    <string name="title_activity_about">About Keitai Jisho</string>
-    <string name="about_title_text" translatable="false">KEITAI JISHO</string>
+    <string name="title_activity_about">About</string>
+    <string name="about_title_text" translatable="false">携帯 辞書</string>
     <string name="about_details_versionRow_label">Version:</string>
     <string name="about_details_versionRow_value" translatable="false">Not defined</string>
     <string name="about_details_dateRow_label">Build date:</string>
@@ -166,5 +166,12 @@
     <string name="no_result_sign_department">Disappointed people service.</string>
 
     <string name="title_activity_bug_report">Bug report</string>
+
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

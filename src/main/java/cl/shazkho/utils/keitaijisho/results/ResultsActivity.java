@@ -24,11 +24,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import cl.shazkho.utils.keitaijisho.R;
-import cl.shazkho.utils.keitaijisho.about.AboutActivity;
 import cl.shazkho.utils.keitaijisho.database.DatabaseManager;
 import cl.shazkho.utils.keitaijisho.objects.ResponseObject;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
 import cl.shazkho.utils.keitaijisho.resultdetails.ResultDetailActivity;
+import cl.shazkho.utils.keitaijisho.settings.SettingsActivity;
 import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
 
 
@@ -100,6 +100,8 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
             e.printStackTrace();
         }
 
+
+
     }
 
 	@Override
@@ -116,15 +118,10 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
                 DatabaseManager manager = new DatabaseManager(this);
                 manager.query( mResponseObject, true );
 				break;
-			case R.id.results_menu_about:
-				Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
-				ActivityOptionsCompat options = ActivityOptionsCompat.makeCustomAnimation(
-					getApplicationContext(),
-					R.anim.abc_slide_in_top,
-					R.anim.abc_slide_out_top
-				);
-				ActivityCompat.startActivity(this, intent, options.toBundle());
-				break;
+			case R.id.results_menu_settings:
+                Intent intent = new Intent(ResultsActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                break;
 			case android.R.id.home:
 				Intent upIntent = NavUtils.getParentActivityIntent(this);
 				if (NavUtils.shouldUpRecreateTask(this, upIntent)) {
@@ -258,4 +255,5 @@ public class ResultsActivity extends CustomActionBarActivity implements TextToSp
         hint.setVisibility(View.GONE);
         hintBackground.setVisibility(View.GONE);
     }
+
 }

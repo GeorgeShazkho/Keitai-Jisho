@@ -24,8 +24,8 @@ android {
         applicationId "cl.shazkho.utils.keitaijisho"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 509
-        versionName "1.0 alpha 150316"
+        versionCode 548
+        versionName "1.0 alpha 150317"
         signingConfig signingConfigs.keitaijishoSignature
     }
     buildTypes {

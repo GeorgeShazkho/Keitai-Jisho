@@ -31,7 +31,7 @@ import cl.shazkho.utils.keitaijisho.tools.StaticHelpers;
  * Handles result list inflation.
  *
  * @author George Shazkho
- * @version 0.7
+ * @version 1.0 alpha 150317
  * @since 2015-03-08
  */
 public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
@@ -42,6 +42,7 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
     private CustomActionBarActivity mParent;
     private JSONArray mHome;
     private boolean isJsonLoaded;
+    private ViewHolder holder;
 
 
 	// CONSTRUCTOR
@@ -85,7 +86,6 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
         }
 
         // View holder Pattern
-        ViewHolder holder;
         if ( convertView == null ) {
             LayoutInflater inflater =
                     (LayoutInflater) mParent.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -93,8 +93,10 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
             holder = new ViewHolder();
             holder.kana_row = (TableRow) convertView.findViewById(R.id.element_result_kana);
             holder.roma_row = (TableRow) convertView.findViewById(R.id.element_result_romaji);
-            holder.kanji_row = (LinearLayout) convertView.findViewById(R.id.element_result_kanji);
+            holder.kanji_row = (TextView) convertView.findViewById(R.id.element_result_kanji_string);
             holder.gloss_row = (LinearLayout) convertView.findViewById(R.id.element_result_gloss);
+            holder.gloss_row_extra = (LinearLayout) convertView.findViewById(R.id.element_result_gloss_extra);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -116,30 +118,28 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
 
             // KANJI SECTION
             JSONArray kanjiArray = result.getJSONArray("kanji");
-            holder.kanji_row.removeAllViews();
+            String kanji_string = "";
             for ( int i = 0; i < kanjiArray.length(); ++i ) {
-                View kanjiView = createTextView(kanjiArray.getString(i), KANJI);
-                kanjiView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        handleDetailRequest( ((TextView) v).getText().toString() );
-                    }
-                });
-                holder.kanji_row.addView( kanjiView );
+                kanji_string += "  " + kanjiArray.getString(i);
             }
+            holder.kanji_row.setText(kanji_string.substring(2));
 
             // GLOSS SECTION
             JSONArray glossArray = result.getJSONArray("gloss");
             holder.gloss_row.removeAllViews();
-            int pos = 1;
+            holder.gloss_row_extra.removeAllViews();
+            String orientation = mParent.getString(R.string.orientation);
             for ( int i = 0; i < glossArray.length(); ++i ) {
                 LayoutInflater glossInflater =
                         (LayoutInflater) mParent.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 View glossView = glossInflater.inflate(R.layout.element_gloss, parent, false);
                 TextView glossContent = (TextView) glossView.findViewById(R.id.element_gloss_content);
-                glossContent.setText(glossArray.getString(i));
-                holder.gloss_row.addView(glossView);
-                ++pos;
+                glossContent.setText( glossArray.getString(i) );
+                if ( i % 2 == 0 && orientation.equals( "land" )) {
+                    holder.gloss_row_extra.addView(glossView);
+                } else {
+                    holder.gloss_row.addView(glossView);
+                }
             }
 
         } catch (JSONException e) {
@@ -214,7 +214,7 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
             newTV.setGravity(Gravity.CENTER_HORIZONTAL);
             size = 12;
         } else if(source == KANJI) {
-            size = 28;
+            size = 24;
         }
         newTV.setTextAppearance(mParent, R.style.KanjiElement);
         newTV.setText(label);
@@ -244,8 +244,9 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
 	private class ViewHolder {
         TableRow kana_row;
         TableRow roma_row;
-        LinearLayout kanji_row;
+        TextView kanji_row;
         LinearLayout gloss_row;
+        LinearLayout gloss_row_extra;
 	}
 
 }

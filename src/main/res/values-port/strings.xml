@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    KEITAI JISHO PROJECT
+    Resource File: Strings PORT
+    NOTE: Translations will not be commented
+
+    @version    1.0 alpha 150317
+    @author     George Shazkho
+    @since      March 17, 2015
+    -->
+
+    <!-- Main strings -->
+
+    <string name="orientation" translatable="false">port</string>
+
+</resources>

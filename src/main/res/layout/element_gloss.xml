@@ -5,9 +5,9 @@ KEITAI JISHO PROJECT
 Layout Resource File:   element_gloss
 Description:            Gloss list element as for LinearLayout inflation
 
-@version    0.7
+@version    1.0 alpha 150317
 @author     George Shazkho
-@date       March 09, 2015
+@since      March 09, 2015
 -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -16,12 +16,24 @@ Description:            Gloss list element as for LinearLayout inflation
     >
 
     <TextView
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:text="◦"
+        android:id="@+id/element_gloss_bullet"
+        android:layout_alignParentRight="false"
+        android:textSize="12sp"
+        android:textColor="@color/AppTheme.text_secondary_icons"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dummyText_medium"
         android:id="@+id/element_gloss_content"
         android:layout_alignParentRight="false"
         android:textSize="12sp"
-        android:textColor="@color/AppTheme.text_secondary_icons"
-        android:layout_alignParentLeft="true" />
+        android:layout_toRightOf="@id/element_gloss_bullet"
+        android:textColor="@color/AppTheme.text_secondary_icons" />
+
 </RelativeLayout>

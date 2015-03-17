@@ -127,20 +127,28 @@ Description:            Result list element as for ListView inflation
             android:layout_below="@+id/element_result_card_kanji">
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/element_result_gloss"
-                android:layout_marginLeft="46dp">
-
-            </LinearLayout>
-
-            <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/element_result_gloss_extra"
-                android:visibility="gone"></LinearLayout>
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/element_result_gloss"
+                    android:layout_marginLeft="46dp"
+                    android:layout_weight="0.5">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/element_result_gloss_extra"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="16dp"></LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
 
 

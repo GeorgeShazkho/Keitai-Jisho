@@ -1,6 +1,6 @@
 <!--
 KEITAI JISHO PROJECT
-Layout Resource File:   activity_about
+Layout Resource File:   activity_about LAND
 
 @version    1.0 alpha 150317
 @author     George Shazkho
@@ -54,22 +54,26 @@ Layout Resource File:   activity_about
                 android:text="@string/about_title_text"
                 android:id="@+id/about_title"
                 android:layout_marginLeft="8dp"
-                android:textSize="24dp"
                 android:fontFamily="sans-serif-light"
                 android:textColor="@color/abc_primary_text_material_dark"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_alignParentRight="true"
+                android:textIsSelectable="false" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Keitai Jisho"
                 android:id="@+id/about_title2"
-                android:layout_below="@+id/about_title"
                 android:layout_marginLeft="8dp"
                 android:fontFamily="sans-serif-light"
                 android:autoText="true"
-                style="@style/TextAppearance.AppCompat.Display2"
-                android:textColor="@color/theme_textColor_inverse" />
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/theme_textColor_inverse"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
 
         </RelativeLayout>
 
@@ -154,7 +158,7 @@ Layout Resource File:   activity_about
                         card_view:cardCornerRadius="2dp"
                         android:id="@+id/about_card_date"
                         android:layout_marginLeft="3dp"
-                        android:layout_marginRight="6dp">
+                        android:layout_marginRight="3dp">
 
 
                         <RelativeLayout
@@ -186,14 +190,6 @@ Layout Resource File:   activity_about
                     </android.support.v7.widget.CardView>
                 </RelativeLayout>
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_weight="0.5"
@@ -207,8 +203,8 @@ Layout Resource File:   activity_about
                         card_view:contentPadding="8dp"
                         card_view:cardCornerRadius="2dp"
                         android:id="@+id/about_author_version"
-                        android:layout_marginLeft="6dp"
-                        android:layout_marginRight="3dp">
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="6dp">
 
 
                         <RelativeLayout
@@ -238,6 +234,14 @@ Layout Resource File:   activity_about
 
                 </RelativeLayout>
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_weight="0.5"
@@ -251,8 +255,8 @@ Layout Resource File:   activity_about
                         card_view:contentPadding="8dp"
                         card_view:cardCornerRadius="2dp"
                         android:id="@+id/about_license_date"
-                        android:layout_marginLeft="3dp"
-                        android:layout_marginRight="6dp">
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="3dp">
 
 
                         <RelativeLayout
@@ -281,14 +285,6 @@ Layout Resource File:   activity_about
                     </android.support.v7.widget.CardView>
                 </RelativeLayout>
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
-
                 <RelativeLayout
                     android:layout_width="fill_parent"
                     android:layout_weight="0.5"
@@ -304,7 +300,7 @@ Layout Resource File:   activity_about
                         card_view:contentPadding="8dp"
                         card_view:cardCornerRadius="2dp"
                         android:id="@+id/about_card_email"
-                        android:layout_marginLeft="6dp"
+                        android:layout_marginLeft="3dp"
                         android:layout_marginRight="3dp">
 
 

@@ -4,7 +4,7 @@
     KEITAI JISHO PROJECT
     Resource File: Styles
 
-    @version    1.0 alpha 150313
+    @version    1.0 alpha 150317
     @author     George Shazkho
     @since      March 09, 2015
     -->
@@ -57,6 +57,7 @@
 
 
     <!-- Additional style definitions -->
+
 
     <style name="AppTheme.buttonAccent">
         <item name="android:paddingLeft">24dp</item>

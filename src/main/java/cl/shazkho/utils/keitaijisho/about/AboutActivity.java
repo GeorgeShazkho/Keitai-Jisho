@@ -1,12 +1,13 @@
 package cl.shazkho.utils.keitaijisho.about;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.WebView;
-import android.widget.TextView;
+import android.view.View;
 
 import cl.shazkho.utils.keitaijisho.R;
 import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
@@ -21,10 +22,10 @@ import cl.shazkho.utils.keitaijisho.objects.custom.CustomActionBarActivity;
  * the new Toolbar, but with older versions of Android.</p>
  *
  * @author George Shazkho
- * @version 0.5b
+ * @version 1.0 alpha 150317
  * @since 2014-12-18
  */
-public class AboutActivity extends CustomActionBarActivity {
+public class AboutActivity extends CustomActionBarActivity implements View.OnClickListener {
 
 
 	// OVERRIDDEN HOOK METHODS
@@ -39,15 +40,11 @@ public class AboutActivity extends CustomActionBarActivity {
 		setSupportActionBar(toolbar);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-		TextView description = (TextView) findViewById(R.id.about_description_value);
-		description.setText(Html.fromHtml(getResources().getString(R.string.about_description_text_html)));
-		WebView webView = (WebView) findViewById(R.id.about_description_webView);
-		webView.loadData(
-			getString(R.string.about_description_text_html),
-			"text/html; charset=UTF-8",
-			null
-		);
-		webView.setBackgroundColor(getResources().getColor(R.color.transparent));
+        CardView email_card = (CardView) findViewById(R.id.about_card_email);
+        CardView web_card = (CardView) findViewById(R.id.about_card_web);
+        email_card.setOnClickListener(this);
+        web_card.setOnClickListener(this);
+
 	}
 
 
@@ -68,4 +65,24 @@ public class AboutActivity extends CustomActionBarActivity {
 
 		return super.onOptionsItemSelected(item);
 	}
+
+    @Override
+    public void onClick(View v) {
+        switch( v.getId() ) {
+            case R.id.about_card_email:
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("plain/text");
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "shazkho@gmail.com" });
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Contact from jisho app");
+                intent.putExtra(Intent.EXTRA_TEXT, "");
+                startActivity(Intent.createChooser(intent, ""));
+                break;
+            case R.id.about_card_web:
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://keitaijisho.shazkho.cl"));
+                startActivity(browserIntent);
+                break;
+            default:
+                break;
+        }
+    }
 }
