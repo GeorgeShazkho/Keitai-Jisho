@@ -10,6 +10,131 @@ Description:            Result list element as for ListView inflation
 @date       March 09, 2015
 -->
 
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    card_view:cardUseCompatPadding="true"
+    card_view:cardElevation="4dp"
+    card_view:contentPadding="16dp"
+    card_view:cardCornerRadius="2dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/element_result_card_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:id="@+id/element_result_card_kana"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/element_result_card_kana_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:background="@color/AppTheme.accentColor"
+                android:padding="-4dp"
+                android:src="@mipmap/ic_kana"
+                android:scaleType="centerCrop" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/element_result_card_kana_layout"
+                android:layout_toRightOf="@+id/element_result_card_kana_icon"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/element_result_table"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/element_result_kana">
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/element_result_romaji"
+                        android:layout_marginTop="-4dp">
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:id="@+id/element_result_card_kanji"
+            android:layout_below="@+id/element_result_card_kana">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/element_result_card_kanji_icon"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/AppTheme.accentColor"
+                android:src="@mipmap/ic_kanji"
+                android:scaleType="centerCrop"
+                android:padding="-4dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="52dp"
+                android:layout_toRightOf="@+id/element_result_card_kanji_icon"
+                android:id="@+id/element_result_kanji_layout">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/element_result_kanji"
+                    android:layout_centerVertical="true">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/element_result_meanings"
+            android:layout_below="@+id/element_result_card_kanji"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/element_result_gloss"
+                android:layout_marginLeft="56dp">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+
+<!--
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -186,4 +311,8 @@ Description:            Result list element as for ListView inflation
         android:layout_marginBottom="16dp">
     </RelativeLayout>
 
+
+
 </RelativeLayout>
+
+-->

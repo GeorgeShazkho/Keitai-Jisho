@@ -16,22 +16,12 @@ Description:            Gloss list element as for LinearLayout inflation
     >
 
     <TextView
-        android:layout_width="24dp"
-        android:layout_height="wrap_content"
-        android:text="@string/dummyText_short"
-        android:id="@+id/element_gloss_number"
-        android:textSize="14sp"
-        android:textColor="@color/AppTheme.text_secondary_icons"
-        android:textStyle="bold"
-        android:layout_alignParentLeft="true"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/dummyText_medium"
         android:id="@+id/element_gloss_content"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/element_gloss_number"
-        android:textSize="14sp"
-        android:textColor="@color/AppTheme.text_base"/>
+        android:layout_alignParentRight="false"
+        android:textSize="12sp"
+        android:textColor="@color/AppTheme.text_secondary_icons"
+        android:layout_alignParentLeft="true" />
 </RelativeLayout>

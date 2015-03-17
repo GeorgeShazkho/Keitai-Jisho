@@ -13,7 +13,8 @@ Layout Resource File:   activity_results
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cl.shazkho.utils.keitaijisho.results.ResultsActivity">
+    tools:context="cl.shazkho.utils.keitaijisho.results.ResultsActivity"
+    android:background="#ffe8e8e8">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/results_toolbar"
@@ -102,7 +103,10 @@ Layout Resource File:   activity_results
         android:layout_below="@+id/results_hint"
         android:layout_alignParentBottom="true"
         android:dividerHeight="0dp"
-        android:divider="@drawable/null_drawable"/>
+        android:divider="@drawable/null_drawable"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp" />
 
     <ScrollView
         android:layout_width="match_parent"

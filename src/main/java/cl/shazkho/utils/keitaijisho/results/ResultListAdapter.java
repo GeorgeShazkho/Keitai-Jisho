@@ -136,9 +136,7 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
                 LayoutInflater glossInflater =
                         (LayoutInflater) mParent.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 View glossView = glossInflater.inflate(R.layout.element_gloss, parent, false);
-                TextView glossNumber = (TextView) glossView.findViewById(R.id.element_gloss_number);
                 TextView glossContent = (TextView) glossView.findViewById(R.id.element_gloss_content);
-                glossNumber.setText(pos+":");
                 glossContent.setText(glossArray.getString(i));
                 holder.gloss_row.addView(glossView);
                 ++pos;
@@ -207,28 +205,27 @@ public class ResultListAdapter extends BaseAdapter implements StaticHelpers {
      * @return The The formatted TextView.
      */
     private TextView createTextView(String label, int source) {
-        int size = 28;
-        int color = mParent.getResources().getColor(R.color.AppTheme_text_base);
-        int padding_side = (int) dpToPx(0, mParent);
-        if(source == ROMAJI) {
-            color = mParent.getResources().getColor(R.color.AppTheme_primaryColor_dark);
-            size = 16;
-        } else if(source == KANJI) {
-            padding_side = (int)dpToPx(0, mParent);
-            size = 32;
-        }
         TextView newTV = new TextView(mParent);
+        int size = 24;
+        newTV.setGravity(Gravity.LEFT);
+        int color = mParent.getResources().getColor(R.color.AppTheme_text_base);
+        if(source == ROMAJI) {
+            color = mParent.getResources().getColor(R.color.AppTheme_accentColor);
+            newTV.setGravity(Gravity.CENTER_HORIZONTAL);
+            size = 12;
+        } else if(source == KANJI) {
+            size = 28;
+        }
         newTV.setTextAppearance(mParent, R.style.KanjiElement);
         newTV.setText(label);
         newTV.setTextSize(TypedValue.COMPLEX_UNIT_SP, size);
         newTV.setTextColor(color);
-        newTV.setGravity(Gravity.CENTER_HORIZONTAL);
-        newTV.setPadding((int)dpToPx(8, mParent), (int)dpToPx(4, mParent), (int)dpToPx(8, mParent), (int)dpToPx(4, mParent));
+        //newTV.setPadding((int)dpToPx(8, mParent), (int)dpToPx(4, mParent), (int)dpToPx(8, mParent), (int)dpToPx(4, mParent));
         TableRow.LayoutParams params = new TableRow.LayoutParams(
                 TableRow.LayoutParams.WRAP_CONTENT,
                 TableRow.LayoutParams.WRAP_CONTENT
         );
-        params.leftMargin = padding_side;
+        params.rightMargin = (int)dpToPx(16, mParent);
         newTV.setLayoutParams(params);
         return newTV;
     }
